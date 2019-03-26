@@ -1,0 +1,12 @@
+1 - Finish website layout
+2 - How to store recipes
+3 - Decide user path through the app
+4 - 
+
+#USER PATH 
+    - Search for a recipe
+        - Tags first
+        - Text then
+    - Find a recipe
+    - Follow steps till the end
+    - Leave a comment with a rating 
