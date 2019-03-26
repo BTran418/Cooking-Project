@@ -1,11 +1,16 @@
 {
     "recipes":[
         {
-            "title":"RecipeTitle",
-            "author":"RecipeAuthor",
-            "ingredients":["ingredient1", "ingredient2", "ingredient3"],
-            "skills":["skill1","skill2","skill3"],
-            "equipment":["equipment1", "equipment2", "equipment3"],
+            "title":"Roasted Eggplant Pastitsio",
+            "author":"FrancesC - AllRecipes employee",
+            "ingredients":["1 large eggplant", "1 tbsp olive oil", "1 pound ground lamb", "1 clove garlic, minced", "1 1/2 cups of chopped onion", "1 1/2 teaspoons salt", "1 teaspoon ground cumin", "1 teaspoon dried oregano", "1/4 teaspoon black pepper", "1/4 teaspoon ground cinammon", "1 can (14 ounce) crushed tomatoes", "1 tablespoon fresh mint, chopped", "2 eggs", "2 tablespoons unsalted butter", "2 tablespoons all-purpose flour", "2 cups milk", "1 clove garlic, lightly crushed", "1 package (8 ounce) crumbled feta cheese", "1/2 teaspoon salt", "Black pepper to taste", "1 pinch freshly greated nutmeg", "1 package (12 ounce) penne pasta", "Cooking spray"],
+            "substitutes":{
+                "1":["Canola oil", "Vegetable oil"],
+                "2":["Ground beef", "1/2 pound beef, 1/2 pound lamb"],
+                "21":["Ziti", "Rigatoni", "Any other tubular pasta of your choice"]
+            },
+            "skills":["Chopping vegetables","Mincing garlic","Boiling water", "Chopping herbs", "Oven broiling"],
+            "equipment":["Knife", "Chopping board", "Oven", "Stove top, pot and strainer", "Skillet", ""],
             "stepAmount":3,
             "bodies":["This is the first part", "This is the second part", "This is the third part"]
         },
@@ -17,6 +22,22 @@
             "equipment":["equipment1", "equipment2", "equipment3"],
             "stepAmount":5,
             "bodies":["This is the first part", "This is the second part", "This is the third part", "This is the fourth part", "This is the fifth part"]
+        },
+        {
+            "title":"AnotherRecipeTitle",
+            "author":"AnotherRecipeAuthor",
+            "ingredients":["ingredient1", "ingredient2", "ingredient3"],
+            "skills":["skill1","skill2","skill3"],
+            "equipment":["equipment1", "equipment2", "equipment3"],
+            "stepAmount":5,
+            "bodies":["This is the first part", "This is the second part", "This is the third part", "This is the fourth part", "This is the fifth part"],
+            "substitutes":{
+                "1":["A", "B", "C"],
+                "2":["D", "F"]
+            }
         }
-    ]
+    ],
+    "measure":{
+    
+    }
 }

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" href="/knifefork.ico">
     <script src="script/script.js"></script>
     <link rel="stylesheet" type="text/css" href="style/recipe.css">
 </head>
@@ -10,8 +11,8 @@
     <div id="recipe_ingredients"></div>
     <div id="recipe_skills"></div>
     <div id="recipe_author"></div>
-    <div id="recipe_body"></div>
-    <button id="next_btn">Next Step</button>
+    <div id="recipe_body" data-current-part=0></div>
+    <button id="next_btn" onclick="nextBody()">Next Step</button>
     <button id="prev_btn">Previous Step</button>
 </body>
 
