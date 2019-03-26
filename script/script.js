@@ -45,7 +45,24 @@ function recipeManager() {
 
 function nextBody(){
     let body = document.getElementById("recipe_body");
+    let current = parseInt(body.getAttribute("data-current-part"));
     body.innerText = jsonFile["recipes"][0].bodies[current+1];
     body.setAttribute("data-current-part", current+1);
+    
+    checkButtonsState(current);
 }
 
+function previousBody(){
+    let body = document.getElementById("recipe_body");
+    let current = parseInt(body.getAttribute("data-current-part"));
+    body.innerText = jsonFile["recipes"][0].bodies[current-1];
+    body.setAttribute("data-current-part", current-1);
+
+    checkButtonsState(current);
+}
+
+function checkButtonsState(current){
+    if(){
+
+    }
+}
