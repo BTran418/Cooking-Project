@@ -8,6 +8,15 @@
             "equipment":["equipment1", "equipment2", "equipment3"],
             "stepAmount":3,
             "bodies":["This is the first part", "This is the second part", "This is the third part"]
+        },
+        {
+            "title":"AnotherRecipeTitle",
+            "author":"AnotherRecipeAuthor",
+            "ingredients":["ingredient1", "ingredient2", "ingredient3"],
+            "skills":["skill1","skill2","skill3"],
+            "equipment":["equipment1", "equipment2", "equipment3"],
+            "stepAmount":5,
+            "bodies":["This is the first part", "This is the second part", "This is the third part", "This is the fourth part", "This is the fifth part"]
         }
     ]
 }
