@@ -1,5 +1,5 @@
-{
-    "recipes":[
+[
+    
         {
             "title":"Roasted Eggplant Pastitsio",
             "author":"FrancesC - AllRecipes employee",
@@ -37,8 +37,4 @@
                 "2":["D", "F"]
             }
         }
-    ],
-    "measure":{
-    
-    }
-}
+]
