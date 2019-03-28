@@ -2,19 +2,39 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="style/recipeStyle.css">
+    <link rel="stylesheet" href="style/style.css">
     <link rel="icon" href="/knifefork.ico">
     <script src="script/script.js"></script>
     <link rel="stylesheet" type="text/css" href="style/recipe.css">
 </head>
 
 <body>
-    <div id="description"></div>
-    <div id="recipe_ingredients"></div>
-    <div id="recipe_skills"></div>
-    <div id="recipe_author"></div>
-    <div id="recipe_body" data-current-part=0></div>
-    <button id="next_btn" onclick="nextBody()">Next Step</button>
-    <button id="prev_btn">Previous Step</button>
+    <!-- Main Div -->
+    <div id="main">
+    <!-- Top Nav bar with links to other pages -->
+    <div class="navbar">
+        <header><h1>Cooking Instructor</h1></header>
+        <a href="#home">Home</a>
+        <a href="#articles">Articles</a>
+        <a href="#videos">Videos</a>
+        <a href="#news">Search</a>
+        <div class="dropdown">
+            <button class="dropbtn">Tags</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div> 
+        <a id="login" href="#login">Login</a>
+        <a id="signup" href="#SignUp">Sign Up</a>
+    </div>
+    <!-- Container for body -->
+<div class="container">
+            <div id="recipeTitle"><h1>Recipe Title</h1></div>
+        </div>
+    </div>
 </body>
 
 

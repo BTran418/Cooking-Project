@@ -8,11 +8,11 @@ window.onload = function () {
     request.responseType = 'json';
     request.send();
     request.onload = function () {
-        jsonObjects = JSON.parse(request.response); //Create recipe objects from a JSON file.
+        jsonObjects = request.response; //Create recipe objects from a JSON file.
         // console.log(jsonFile["recipes"][0]);
         // console.log(jsonFile["recipes"][2]["substitutes"]["1"][0]);
-        console.log(jsonObjects["recipes"][0].ingredients);
-        recipeManager();
+        console.log(jsonObjects);
+        // recipeManager();
     }
 }
 
@@ -24,7 +24,7 @@ function searchByTags(tags) {
 
 }
 
-
+//Populates the current recipe page.
 function recipeManager() {
     let author = document.getElementById("recipe_author");
     let ingredients = document.getElementById("recipe_ingredients");
@@ -62,7 +62,16 @@ function previousBody(){
 }
 
 function checkButtonsState(current){
-    if(){
+    if(true){
 
     }
+}
+
+
+/**
+ * Populates the recipe website 
+ * @param id - Recipe ID
+ */
+function populateRecipeSite(id){
+
 }
