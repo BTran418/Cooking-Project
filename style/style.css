@@ -1,6 +1,22 @@
 body {
 margin: 0;
 font-family: Arial, Helvetica, sans-serif;
+background-image: url("/photos/beauties.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+#black_alpha {
+    background-color: black; 
+    opacity: 0.6;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: -1;
 }
 
 #ROW {
@@ -76,6 +92,10 @@ padding: 12px 16px;
 text-decoration: none;
 display: block;
 text-align: left;
+}
+
+.spacer {
+    height: 9rem;
 }
 
 .dropdown-content a:hover {

@@ -11,6 +11,7 @@
 
 <body>
     <!-- Main Div -->
+    <div id="black_alpha"></div>
     <div id="main">
         <!-- Top Nav bar with links to other pages -->
         <div class="navbar">
@@ -33,13 +34,15 @@
             <a id="signup" href="#SignUp">Sign Up</a>
         </div>
         <!-- Container for body -->
-        <div>
-            <h1 id="recipeTitle">Recipe Title</h1>
-        </div>
-        <div class="container">
+        <div class="spacer"></div>
+        <div class="container" id="top">
+            <div class="recipe_title">
+                    <h1 class="recipe_title_text">Recipe Title</h1>
+            </div>
+            <div class="container">
             <div class="container_box" id="ingredients">
                 <h1>Ingredients</h1>
-                <div class="container_item">1 large eggplant</div>
+                <div class="container_item" onclick="showSubstitutes(this)"><div class="item_text">1 large eggplant</div></div>
             </div>
             <div class="container_box" id="skills">
                 <h1>Skills</h1>
@@ -48,6 +51,27 @@
                 <h1>Equipment</h1>
             </div>
         </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="container2">
+            <div class="instructor_title">
+                <h1>Cooking Instructions</h1>
+            </div>
+            <div id="steps">
+
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="container3">
+                <div class="discussion_title">
+                    <h1>Comments</h1>
+                </div>
+                <div id="comments">
+    
+                </div>
+            </div>
+    </div>
+    <div class="substitutes disabled">
         
     </div>
 </body>

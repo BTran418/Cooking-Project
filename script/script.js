@@ -44,6 +44,9 @@ function recipeManager() {
     body.innerText = jsonObjects["recipes"][0].bodies[0];
 }
 
+/**
+ * Populates with the next body.
+ */
 function nextBody(){
     let body = document.getElementById("recipe_body");
     let current = parseInt(body.getAttribute("data-current-part"));
@@ -83,7 +86,7 @@ function getRecipeById(id){
 function populateRecipeSite(id){
     let recipeObj = getRecipeById(id);
     //TODO: Fill the getters
-    let titleDiv = document.getElementById("recipeTitle");
+    let titleDiv = document.getElementsByClassName("recipe_title_text")[0];
     // let authorDiv = document.getElementById();
     // let descriptionDiv = document.getElementById();
     let ingredientsDiv = document.getElementById("ingredients");
@@ -96,5 +99,32 @@ function populateRecipeSite(id){
     // authorDiv.innerText = recipeObj.author;
     // descriptionDiv.innerText = recipeObj.description;
     
-    //TODO: Create divs for recipes
+    //Create divs for each ingredient.
+    for(let i = 0; i < recipeObj.ingredients.length; i++){
+        //Create item div.
+        let itemDiv = document.createElement("div");
+        itemDiv.classList.add("container_item");
+        //Create text div and assign the text.
+        let textDiv = document.createElement("div");
+        textDiv.classList.add("item_text");
+        textDiv.innerText = recipeObj.ingredients[i];
+        //Add text div to item div.
+        itemDiv.append(textDiv);
+        //Add to ingredients div.
+        ingredientsDiv.append(itemDiv);
+    }
+}
+
+/**
+ * Show substitute divs with the substitutes of that specific element.
+ */
+function showSubstitutes(element){
+    let substitutesDiv = document.getElementsByClassName("substitutes")[0];
+    let position = element.getBoundingClientRect();
+    
+    if(substitutesDiv.classList.contains("disabled")){
+        substitutesDiv.classList.remove("disabled");
+    }
+
+    console.log(position);
 }
