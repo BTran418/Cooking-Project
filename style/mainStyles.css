@@ -17,3 +17,38 @@
     color: white;
 }
 
+.video {
+    width: 100%;
+    border: 1px solid black;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    color: white; 
+}
+
+#videos {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.recipe {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.recipe:before {
+    position:absolute;
+    font-family: FontAwesome;
+    font-size: 100px;
+    color: black;
+    opacity: .8;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+.recipe:hover:before {
+    color: red;
+  }

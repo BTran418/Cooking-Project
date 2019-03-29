@@ -1,6 +1,7 @@
 "use strict";
 let jsonObjects = null; //All recipe objects
 let targetIngredient = null;
+let targetRecipeID = 0;
 
 // window.addEvent('scroll', updateSubstitutePosition());
 window.onload = function () {
@@ -15,7 +16,7 @@ window.onload = function () {
         // console.log(jsonFile["recipes"][2]["substitutes"]["1"][0]);
         console.log(jsonObjects);
         // recipeManager();
-        populateRecipeSite(0);
+        populateRecipeSite(targetRecipeID);
     }
 }
 
@@ -28,47 +29,47 @@ function searchByTags(tags) {
 }
 
 //Populates the current recipe page.
-function recipeManager() {
-    let author = document.getElementById("recipe_author");
-    let ingredients = document.getElementById("recipe_ingredients");
-    let skills = document.getElementById("recipe_skills");
-    let body = document.getElementById("recipe_body");
+// function recipeManager() {
+//     let author = document.getElementById("recipe_author");
+//     let ingredients = document.getElementById("recipe_ingredients");
+//     let skills = document.getElementById("recipe_skills");
+//     let body = document.getElementById("recipe_body");
 
-    author.innerText = jsonObjects["recipes"][0].author;
-    
-    for(let i = 0; i < jsonObjects["recipes"][0].ingredients.length; i++){
+//     author.innerText = jsonObjects["recipes"][0].author;
 
-        ingredients.innerHTML += jsonObjects["recipes"][0].ingredients[i] + "<br>";
-    }
-    ingredients.innerHTML += "<br>"
+//     for(let i = 0; i < jsonObjects["recipes"][0].ingredients.length; i++){
 
-    skills.innerText = jsonObjects["recipes"][0].skills;
-    body.innerText = jsonObjects["recipes"][0].bodies[0];
-}
+//         ingredients.innerHTML += jsonObjects["recipes"][0].ingredients[i] + "<br>";
+//     }
+//     ingredients.innerHTML += "<br>"
+
+//     skills.innerText = jsonObjects["recipes"][0].skills;
+//     body.innerText = jsonObjects["recipes"][0].bodies[0];
+// }
 
 /**
  * Populates with the next body.
  */
-function nextBody(){
+function nextBody() {
     let body = document.getElementById("recipe_body");
     let current = parseInt(body.getAttribute("data-current-part"));
-    body.innerText = jsonObjects["recipes"][0].bodies[current+1];
-    body.setAttribute("data-current-part", current+1);
-    
-    checkButtonsState(current);
-}
-
-function previousBody(){
-    let body = document.getElementById("recipe_body");
-    let current = parseInt(body.getAttribute("data-current-part"));
-    body.innerText = jsonObjects["recipes"][0].bodies[current-1];
-    body.setAttribute("data-current-part", current-1);
+    body.innerText = jsonObjects["recipes"][0].bodies[current + 1];
+    body.setAttribute("data-current-part", current + 1);
 
     checkButtonsState(current);
 }
 
-function checkButtonsState(current){
-    if(true){
+function previousBody() {
+    let body = document.getElementById("recipe_body");
+    let current = parseInt(body.getAttribute("data-current-part"));
+    body.innerText = jsonObjects["recipes"][0].bodies[current - 1];
+    body.setAttribute("data-current-part", current - 1);
+
+    checkButtonsState(current);
+}
+
+function checkButtonsState(current) {
+    if (true) {
 
     }
 }
@@ -77,7 +78,7 @@ function checkButtonsState(current){
  * Returns specific recipe object.
  * @param id - Target recipe ID
  */
-function getRecipeById(id){
+function getRecipeById(id) {
     return jsonObjects[id];
 }
 
@@ -85,7 +86,7 @@ function getRecipeById(id){
  * Populates the recipe website. Creates divs as necessary.
  * @param id - Recipe ID
  */
-function populateRecipeSite(id){
+function populateRecipeSite(id) {
     let recipeObj = getRecipeById(id);
     //TODO: Fill the getters
     let titleDiv = document.getElementsByClassName("recipe_title_text")[0];
@@ -100,12 +101,13 @@ function populateRecipeSite(id){
     titleDiv.innerText = recipeObj.title;
     // authorDiv.innerText = recipeObj.author;
     // descriptionDiv.innerText = recipeObj.description;
-    
+
     //Create divs for each ingredient.
-    for(let i = 0; i < recipeObj.ingredients.length; i++){
+    for (let i = 0; i < recipeObj.ingredients.length; i++) {
         //Create item div.
         let itemDiv = document.createElement("div");
         itemDiv.classList.add("container_item");
+        itemDiv.setAttribute("onclick", "showSubstitutes(this)")
         //Create text div and assign the text.
         let textDiv = document.createElement("div");
         textDiv.classList.add("item_text");
@@ -119,22 +121,31 @@ function populateRecipeSite(id){
 
 /**
  * Show substitute divs with the substitutes of that specific element.
+ * Creates the substitute div right next to the ingredient
  */
-function showSubstitutes(element){
+function showSubstitutes(element) {
     targetIngredient = element;
     let substitutesDiv = document.getElementsByClassName("substitutes")[0];
     let position = element.getBoundingClientRect();
-    
-    if(substitutesDiv.classList.contains("disabled")){
+
+    if (substitutesDiv.classList.contains("disabled")) {
         substitutesDiv.classList.remove("disabled");
     }
 
-    substitutesDiv.setAttribute("style","top:"+ position.y + "px; left:"+ (position.x + element.offsetWidth) +"px;");
-    console.log(position);
+    substitutesDiv.setAttribute("style", "top:" + (position.top + window.scrollY) + "px; left:" + (position.x + element.offsetWidth) + "px;");
+    // console.log(populateSubstitutes());
+    populateSubstitutes();
 }
 
-function updateSubstitutePosition(){
+function populateSubstitutes() {
     let substitutesDiv = document.getElementsByClassName("substitutes")[0];
-    let position = targetIngredient.getBoundingClientRect();
-    substitutesDiv.setAttribute("style","top:"+ (position.y + "px;"));
+    let substitutesTarget = jsonObjects[targetRecipeID].substitutes['1']; //Change this correlate with the ingredient.
+
+    for (let i = 0; i < substitutesTarget.length; i++) {
+        let itemDiv = document.createElement("div");
+        itemDiv.classList.add("substitute_item");
+        itemDiv.innerText = substitutesTarget[i];
+        substitutesDiv.append(itemDiv);
+    }
+    console.log(substitutesTarget);
 }
