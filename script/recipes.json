@@ -35,7 +35,8 @@
             ],
             "2": [
                 "Ground beef",
-                "1/2 pound beef, 1/2 pound lamb"
+                "1/2 pound beef",
+                "1/2 pound lamb"
             ],
             "21": [
                 "Ziti",
@@ -73,8 +74,8 @@
             "Divide pasta between the white sauce and the lamb sauce and mix to combine. Pour the pasta with lamb sauce into the prepared baking dish; spread the pasta with white sauce on top.",
             "Bake in the preheated oven until top is golden and pastitsio is bubbling, about 30 minutes. Let cool for 5 minutes before serving."
         ],
-        "videos":{
-            "1":"video_source"
+        "videos": {
+            "1": "video_source"
         }
     },
     {

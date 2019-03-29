@@ -1,6 +1,6 @@
 "use strict";
 let jsonObjects = null; //All recipe objects
-let targetIngredient = null;
+let targetIngredientId = null;
 let targetRecipeID = 0;
 
 // window.addEvent('scroll', updateSubstitutePosition());
@@ -14,7 +14,7 @@ window.onload = function () {
         jsonObjects = request.response; //Create recipe objects from a JSON file.
         // console.log(jsonFile["recipes"][0]);
         // console.log(jsonFile["recipes"][2]["substitutes"]["1"][0]);
-        console.log(jsonObjects);
+        // console.log(jsonObjects);
         // recipeManager();
         populateRecipeSite(targetRecipeID);
     }
@@ -107,7 +107,8 @@ function populateRecipeSite(id) {
         //Create item div.
         let itemDiv = document.createElement("div");
         itemDiv.classList.add("container_item");
-        itemDiv.setAttribute("onclick", "showSubstitutes(this)")
+        itemDiv.setAttribute("onclick", "showSubstitutes(this)");
+        itemDiv.setAttribute("data-id", i);
         //Create text div and assign the text.
         let textDiv = document.createElement("div");
         textDiv.classList.add("item_text");
@@ -121,31 +122,57 @@ function populateRecipeSite(id) {
 
 /**
  * Show substitute divs with the substitutes of that specific element.
- * Creates the substitute div right next to the ingredient
+ * Creates the substitute div right next to the ingredient if there are 
+ * ingredients that can be used as substitute.
  */
 function showSubstitutes(element) {
-    targetIngredient = element;
+    targetIngredientId = element.getAttribute("data-id");
     let substitutesDiv = document.getElementsByClassName("substitutes")[0];
     let position = element.getBoundingClientRect();
 
     if (substitutesDiv.classList.contains("disabled")) {
         substitutesDiv.classList.remove("disabled");
     }
-
+    //Set window right next to the ingredient
     substitutesDiv.setAttribute("style", "top:" + (position.top + window.scrollY) + "px; left:" + (position.x + element.offsetWidth) + "px;");
     // console.log(populateSubstitutes());
     populateSubstitutes();
 }
-
+/**
+ * Populates the substitute div with the ingredients related to the target ingredient.
+ */
 function populateSubstitutes() {
     let substitutesDiv = document.getElementsByClassName("substitutes")[0];
-    let substitutesTarget = jsonObjects[targetRecipeID].substitutes['1']; //Change this correlate with the ingredient.
+    let substitutesTarget = jsonObjects[targetRecipeID].substitutes['' + targetIngredientId]; //Change this correlate with the ingredient.
 
-    for (let i = 0; i < substitutesTarget.length; i++) {
+    // Delete previous ingredients if any
+    if (substitutesDiv.children.length > 1) {
+        while(substitutesDiv.children.length != 1){
+            substitutesDiv.children[1].remove();
+        }
+    }
+    console.log(substitutesDiv.children);
+    if (substitutesTarget != null) {
+        //Adds matching ingredients
+        console.log("Found substitution");
+        for (let i = 0; i < substitutesTarget.length; i++) {
+            let itemDiv = document.createElement("div");
+            itemDiv.classList.add("substitute_item");
+            itemDiv.innerText = substitutesTarget[i];
+            substitutesDiv.append(itemDiv);
+        }
+    }
+    else {
         let itemDiv = document.createElement("div");
-        itemDiv.classList.add("substitute_item");
-        itemDiv.innerText = substitutesTarget[i];
+        itemDiv.innerText = "None found :(";
         substitutesDiv.append(itemDiv);
     }
-    console.log(substitutesTarget);
+
+    //Adds matching ingredients
+    // for (let i = 0; i < substitutesTarget.length; i++) {
+    //     let itemDiv = document.createElement("div");
+    //     itemDiv.classList.add("substitute_item");
+    //     itemDiv.innerText = substitutesTarget[i];
+    //     substitutesDiv.append(itemDiv);
+    // }
 }
