@@ -126,17 +126,30 @@ function populateRecipeSite(id) {
  * ingredients that can be used as substitute.
  */
 function showSubstitutes(element) {
+    event.stopPropagation();
     targetIngredientId = element.getAttribute("data-id");
     let substitutesDiv = document.getElementsByClassName("substitutes")[0];
     let position = element.getBoundingClientRect();
 
-    if (substitutesDiv.classList.contains("disabled")) {
-        substitutesDiv.classList.remove("disabled");
+    //Same ingredient was clicked
+    if (targetIngredientId == substitutesDiv.getAttribute("data-current-id")) {
+        if (!substitutesDiv.classList.contains("disabled")) {
+            substitutesDiv.classList.add("disabled");
+        }
+        else{ //If the same was clicked as the last time but the substitute menu was disabled.
+            substitutesDiv.classList.remove("disabled");
+            populateSubstitutes();
+        }
     }
-    //Set window right next to the ingredient
+    else { //Different ingredient was clicked.
+        substitutesDiv.classList.remove("disabled");        
+        substitutesDiv.setAttribute("data-current-id", targetIngredientId);        
+        populateSubstitutes();
+    }
+
+    //Set substitute window right next to the ingredient
     substitutesDiv.setAttribute("style", "top:" + (position.top + window.scrollY) + "px; left:" + (position.x + element.offsetWidth) + "px;");
-    // console.log(populateSubstitutes());
-    populateSubstitutes();
+    // populateSubstitutes();
 }
 /**
  * Populates the substitute div with the ingredients related to the target ingredient.
@@ -146,10 +159,6 @@ function populateSubstitutes() {
     let substitutesTarget = jsonObjects[targetRecipeID].substitutes['' + targetIngredientId];
     let targetIngredientDiv = document.querySelector(".container_item[data-id=\"" + targetIngredientId + "\"]").children[0];
     let subIndex = -1; //substitute 
-
-    // console.log(jsonObjects[targetRecipeID].substitutes['' + targetIngredientId]);
-
-
 
     // Delete previous ingredients if any
     if (substitutesDiv.children.length > 1) {
@@ -170,7 +179,7 @@ function populateSubstitutes() {
         // console.log("Found substitution");
         for (let i = 0; i < substitutesTarget.length; i++) {
             let itemDiv = document.createElement("div");
-            
+
             itemDiv.classList.add("substitute_item");
 
             if (subIndex == i) {
@@ -180,7 +189,7 @@ function populateSubstitutes() {
             else {
                 itemDiv.innerText = substitutesTarget[i];
             }
-            
+
             itemDiv.setAttribute("onclick", "substituteClicked(this)")
             substitutesDiv.append(itemDiv);
         }
@@ -191,7 +200,10 @@ function populateSubstitutes() {
         substitutesDiv.append(itemDiv);
     }
 }
-
+/**
+ * Function called swaps the target ingredient with substitute clicked. 
+ * @param {*} element - element clicked on
+ */
 function substituteClicked(element) {
     // let targetIngredientDiv = document.getElementsByClassName("substitutes")[0].children[targetIngredientId];    
     // console.log(document.querySelector(".container_item[data-id=\""+targetIngredientId+"\"]")); //TODO: Delete after
@@ -200,4 +212,10 @@ function substituteClicked(element) {
     let newText = element.innerText;
     element.innerText = targetIngredientDiv.innerText;
     targetIngredientDiv.innerText = newText;
+}
+
+function disableSubsMenu(){
+    if(!document.getElementsByClassName("substitutes")[0].classList.contains("disabled")){
+        document.getElementsByClassName("substitutes")[0].classList.add("disabled");
+    }
 }
