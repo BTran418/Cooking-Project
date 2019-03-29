@@ -13,6 +13,7 @@ window.onload = function () {
         // console.log(jsonFile["recipes"][2]["substitutes"]["1"][0]);
         console.log(jsonObjects);
         // recipeManager();
+        populateRecipeSite(0);
     }
 }
 
@@ -67,11 +68,33 @@ function checkButtonsState(current){
     }
 }
 
+/**
+ * Returns specific recipe object.
+ * @param id - Target recipe ID
+ */
+function getRecipeById(id){
+    return jsonObjects[id];
+}
 
 /**
- * Populates the recipe website 
+ * Populates the recipe website. Creates divs as necessary.
  * @param id - Recipe ID
  */
 function populateRecipeSite(id){
+    let recipeObj = getRecipeById(id);
+    //TODO: Fill the getters
+    let titleDiv = document.getElementById("recipeTitle");
+    // let authorDiv = document.getElementById();
+    // let descriptionDiv = document.getElementById();
+    let ingredientsDiv = document.getElementById("ingredients");
+    // let substitutesDiv = document.getElementById();
+    // let skillsDiv = document.getElementById();
+    // let equipmentDiv = document.getElementById();
+    // let bodyDiv = document.getElementById();
 
+    titleDiv.innerText = recipeObj.title;
+    // authorDiv.innerText = recipeObj.author;
+    // descriptionDiv.innerText = recipeObj.description;
+    
+    //TODO: Create divs for recipes
 }

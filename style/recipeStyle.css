@@ -1,3 +1,24 @@
-h1{
+h1 {
     text-align: center;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 25rem;
+    justify-content: center;
+}
+
+.container_box {
+    display: flex;
+    flex-flow: column nowrap;
+    border: 2px solid black;
+    min-height: 25%;
+    min-width: 25%;
+    margin: 15px;
+}
+
+.container_item{
+    
 }
