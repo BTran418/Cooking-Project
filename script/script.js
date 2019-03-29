@@ -143,22 +143,45 @@ function showSubstitutes(element) {
  */
 function populateSubstitutes() {
     let substitutesDiv = document.getElementsByClassName("substitutes")[0];
-    let substitutesTarget = jsonObjects[targetRecipeID].substitutes['' + targetIngredientId]; //Change this correlate with the ingredient.
+    let substitutesTarget = jsonObjects[targetRecipeID].substitutes['' + targetIngredientId];
+    let targetIngredientDiv = document.querySelector(".container_item[data-id=\"" + targetIngredientId + "\"]").children[0];
+    let subIndex = -1; //substitute 
+
+    // console.log(jsonObjects[targetRecipeID].substitutes['' + targetIngredientId]);
+
+
 
     // Delete previous ingredients if any
     if (substitutesDiv.children.length > 1) {
-        while(substitutesDiv.children.length != 1){
+        while (substitutesDiv.children.length != 1) {
             substitutesDiv.children[1].remove();
         }
     }
-    console.log(substitutesDiv.children);
+
     if (substitutesTarget != null) {
+        //Check if it was already substituted
+        for (let i = 0; i < substitutesTarget.length; i++) {
+            if (substitutesTarget[i] == targetIngredientDiv.innerText) {
+                subIndex = i;
+                console.log("Subindex: " + subIndex);
+            }
+        }
         //Adds matching ingredients
-        console.log("Found substitution");
+        // console.log("Found substitution");
         for (let i = 0; i < substitutesTarget.length; i++) {
             let itemDiv = document.createElement("div");
+            
             itemDiv.classList.add("substitute_item");
-            itemDiv.innerText = substitutesTarget[i];
+
+            if (subIndex == i) {
+                itemDiv.innerText = getRecipeById(targetRecipeID).ingredients[targetIngredientId];
+                console.log(substitutesTarget[i] + " -> " + getRecipeById(targetRecipeID).ingredients[targetIngredientId]);
+            }
+            else {
+                itemDiv.innerText = substitutesTarget[i];
+            }
+            
+            itemDiv.setAttribute("onclick", "substituteClicked(this)")
             substitutesDiv.append(itemDiv);
         }
     }
@@ -167,12 +190,14 @@ function populateSubstitutes() {
         itemDiv.innerText = "None found :(";
         substitutesDiv.append(itemDiv);
     }
+}
 
-    //Adds matching ingredients
-    // for (let i = 0; i < substitutesTarget.length; i++) {
-    //     let itemDiv = document.createElement("div");
-    //     itemDiv.classList.add("substitute_item");
-    //     itemDiv.innerText = substitutesTarget[i];
-    //     substitutesDiv.append(itemDiv);
-    // }
+function substituteClicked(element) {
+    // let targetIngredientDiv = document.getElementsByClassName("substitutes")[0].children[targetIngredientId];    
+    // console.log(document.querySelector(".container_item[data-id=\""+targetIngredientId+"\"]")); //TODO: Delete after
+    let targetIngredientDiv = document.querySelector(".container_item[data-id=\"" + targetIngredientId + "\"]").children[0];
+
+    let newText = element.innerText;
+    element.innerText = targetIngredientDiv.innerText;
+    targetIngredientDiv.innerText = newText;
 }
