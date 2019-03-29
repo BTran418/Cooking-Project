@@ -1,6 +1,8 @@
 "use strict";
 let jsonObjects = null; //All recipe objects
+let targetIngredient = null;
 
+// window.addEvent('scroll', updateSubstitutePosition());
 window.onload = function () {
     //Get recipe JSON file
     let request = new XMLHttpRequest();
@@ -119,6 +121,7 @@ function populateRecipeSite(id){
  * Show substitute divs with the substitutes of that specific element.
  */
 function showSubstitutes(element){
+    targetIngredient = element;
     let substitutesDiv = document.getElementsByClassName("substitutes")[0];
     let position = element.getBoundingClientRect();
     
@@ -126,5 +129,12 @@ function showSubstitutes(element){
         substitutesDiv.classList.remove("disabled");
     }
 
+    substitutesDiv.setAttribute("style","top:"+ position.y + "px; left:"+ (position.x + element.offsetWidth) +"px;");
     console.log(position);
+}
+
+function updateSubstitutePosition(){
+    let substitutesDiv = document.getElementsByClassName("substitutes")[0];
+    let position = targetIngredient.getBoundingClientRect();
+    substitutesDiv.setAttribute("style","top:"+ (position.y + "px;"));
 }

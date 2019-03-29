@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="script/video.js"></script>
     <link rel="icon" href="/knifefork.ico">
     <script src="script/script.js"></script>
     <link rel="stylesheet" href="style/style.css">
@@ -11,6 +12,7 @@
     <title>Cooking Instructor</title>
 </head>
 <body>
+    <div id="black_alpha"></div>
     <div class="navbar">
     <header><h1>Cooking Instructor</h1></header>
         <a href="#home">Home</a>
@@ -36,15 +38,16 @@
             </div>
         </div>
         <div class="container">
-            <div id="trendingVideos">
+            <div class="wrapper">
                 <div><h1>Trending Recipes</h1></div>
                 <table>
                     <tr><th>Pad Thai</th><th>Recipe 2</th><th>Recipe 3</th><th>Recipe 4</th></tr>
-                    <tr><td><video width="320" height="240" src="/videos/pad_thai.mp4" type="video/mp4"></video></td>
-                    <td><video width="320" height="240" src="/videos/pad_thai.mp4" type="video/mp4"></video></td>
-                    <td><video width="320" height="240" src="/videos/pad_thai.mp4" type="video/mp4"></video></td>
-                    <td><video width="320" height="240" src="/videos/pad_thai.mp4" type="video/mp4"></video></td></tr>
-                </table>   
+                    <tr><td><video class="video" width="320" height="240" src="/videos/pad_thai.mp4" type="video/mp4"></video></td>
+                    <td><video class="video" width="320" height="240" src="/videos/pad_thai.mp4" type="video/mp4"></video></td>
+                    <td><video class="video" width="320" height="240" src="/videos/pad_thai.mp4" type="video/mp4"></video></td>
+                    <td><video class="video" width="320" height="240" src="/videos/pad_thai.mp4" type="video/mp4"></video></td></tr>
+                </table>
+                <div class="playpause"></div>   
             </div>
         </div>
     </div>
