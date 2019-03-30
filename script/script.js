@@ -163,7 +163,7 @@ function prevButtonClicked(element) {
         return;
     }
     else {
-        let recipeObj = getRecipeById(targetRecipeID);    
+        let recipeObj = getRecipeById(targetRecipeID);
         let bodyDiv = document.getElementById("steps");
 
         currStep--;
@@ -191,7 +191,7 @@ function nextButtonClicked(element) {
         return;
     }
     else {
-        let recipeObj = getRecipeById(targetRecipeID);    
+        let recipeObj = getRecipeById(targetRecipeID);
         let bodyDiv = document.getElementById("steps");
 
         currStep++;
@@ -202,8 +202,8 @@ function nextButtonClicked(element) {
         bodyDiv.getElementsByClassName("body_zone")[0].children[0].innerText = recipeObj.bodies[currStep]; //body_text div
         bodyDiv.getElementsByClassName("body_zone")[0].children[0].setAttribute("data-current-step", currStep);
         document.getElementById("steps").children[0].setAttribute("data-current-step", currStep); //media_zone div
-        document.getElementsByClassName("step_count")[0].innerText = (currStep + 1) +"/" + recipeObj.bodies.length;
-        
+        document.getElementsByClassName("step_count")[0].innerText = (currStep + 1) + "/" + recipeObj.bodies.length;
+
         //Set image 
         //TODO: SET VIDEO FOR IT TOO BUT HOW
         if (getTargetMedia(currStep) != null && getTargetMedia(currStep).includes(".jpg")) {
