@@ -21,11 +21,11 @@
             "2 tablespoons all-purpose flour",
             "2 cups milk",
             "1 clove garlic, lightly crushed",
-            "1 package (8 ounce) crumbled feta cheese",
+            "1 package (8 oz) crumbled feta cheese",
             "1/2 teaspoon salt",
             "Black pepper to taste",
             "1 pinch freshly greated nutmeg",
-            "1 package (12 ounce) penne pasta",
+            "1 package (12 oz) penne pasta",
             "Cooking spray"
         ],
         "substitutes": {
@@ -74,8 +74,13 @@
             "Divide pasta between the white sauce and the lamb sauce and mix to combine. Pour the pasta with lamb sauce into the prepared baking dish; spread the pasta with white sauce on top.",
             "Bake in the preheated oven until top is golden and pastitsio is bubbling, about 30 minutes. Let cool for 5 minutes before serving."
         ],
-        "videos": {
-            "1": "video_source"
+        "media": {
+            "0": "cook1.jpg",
+            "1": "cook2.jpg",
+            "2": "cook1.jpg",
+            "3": "cook2.jpg",
+            "4": "cook1.jpg",
+            "5": "cook2.jpg"
         }
     },
     {

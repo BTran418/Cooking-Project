@@ -47,32 +47,27 @@ function searchByTags(tags) {
 //     body.innerText = jsonObjects["recipes"][0].bodies[0];
 // }
 
-/**
- * Populates with the next body.
- */
-function nextBody() {
-    let body = document.getElementById("recipe_body");
-    let current = parseInt(body.getAttribute("data-current-part"));
-    body.innerText = jsonObjects["recipes"][0].bodies[current + 1];
-    body.setAttribute("data-current-part", current + 1);
+//TODO: Delete this after maybe?
+// /**
+//  * Populates with the next body.
+//  */
+// function nextBody() {
+//     let body = document.getElementById("recipe_body");
+//     let current = parseInt(body.getAttribute("data-current-part"));
+//     body.innerText = jsonObjects["recipes"][0].bodies[current + 1];
+//     body.setAttribute("data-current-part", current + 1);
 
-    checkButtonsState(current);
-}
+//     checkButtonsState(current);
+// }
 
-function previousBody() {
-    let body = document.getElementById("recipe_body");
-    let current = parseInt(body.getAttribute("data-current-part"));
-    body.innerText = jsonObjects["recipes"][0].bodies[current - 1];
-    body.setAttribute("data-current-part", current - 1);
+// function previousBody() {
+//     let body = document.getElementById("recipe_body");
+//     let current = parseInt(body.getAttribute("data-current-part"));
+//     body.innerText = jsonObjects["recipes"][0].bodies[current - 1];
+//     body.setAttribute("data-current-part", current - 1);
 
-    checkButtonsState(current);
-}
-
-function checkButtonsState(current) {
-    if (true) {
-
-    }
-}
+//     checkButtonsState(current);
+// }
 
 /**
  * Returns specific recipe object.
@@ -94,15 +89,16 @@ function populateRecipeSite(id) {
     // let descriptionDiv = document.getElementById();
     let ingredientsDiv = document.getElementById("ingredients");
     // let substitutesDiv = document.getElementById();
-    // let skillsDiv = document.getElementById();
-    // let equipmentDiv = document.getElementById();
-    // let bodyDiv = document.getElementById();
+    let skillsDiv = document.getElementById("skills");
+    let equipmentDiv = document.getElementById("equipment");
+    let bodyDiv = document.getElementById("steps");
 
     titleDiv.innerText = recipeObj.title;
     // authorDiv.innerText = recipeObj.author;
     // descriptionDiv.innerText = recipeObj.description;
 
-    //Create divs for each ingredient.
+    //#region Load areas
+    //INGREDIENTS
     for (let i = 0; i < recipeObj.ingredients.length; i++) {
         //Create item div.
         let itemDiv = document.createElement("div");
@@ -118,7 +114,117 @@ function populateRecipeSite(id) {
         //Add to ingredients div.
         ingredientsDiv.append(itemDiv);
     }
+    //SKILLS
+    for (let i = 0; i < recipeObj.skills.length; i++) {
+        //Create item div.
+        let itemDiv = document.createElement("div");
+        itemDiv.classList.add("container_item");
+        itemDiv.setAttribute("data-id", i);
+        //Create text div and assign the text.
+        let textDiv = document.createElement("div");
+        textDiv.classList.add("item_text");
+        textDiv.innerText = recipeObj.skills[i];
+        //Add text div to item div.
+        itemDiv.append(textDiv);
+        //Add to skills div.
+        skillsDiv.append(itemDiv)
+    }
+    //EQUIPMENT
+    for (let i = 0; i < recipeObj.equipment.length; i++) {
+        //Create item div.
+        let itemDiv = document.createElement("div");
+        itemDiv.classList.add("container_item");
+        itemDiv.setAttribute("data-id", i);
+        //Create text div and assign the text.
+        let textDiv = document.createElement("div");
+        textDiv.classList.add("item_text");
+        textDiv.innerText = recipeObj.equipment[i];
+        //Add text div to item div.
+        itemDiv.append(textDiv);
+        //Add to skills div.
+        equipmentDiv.append(itemDiv)
+    }
+    //#endregion
+
+    //Load first body
+    bodyDiv.getElementsByClassName("body_zone")[0].children[0].innerText = recipeObj.bodies[0]; //body_text div
+    bodyDiv.getElementsByClassName("body_zone")[0].children[0].setAttribute("data-current-step", 0);
+    document.getElementById("steps").children[0].setAttribute("data-current-step", 0); //media_zone div
+    if (getTargetMedia(0).includes(".jpg")) {
+        document.getElementById("steps").children[0].children[0].setAttribute("src", "photos/" + getTargetMedia(0))
+    }
+    //Set step count nav bar
+    document.getElementsByClassName("step_count")[0].innerText = "1/" + recipeObj.bodies.length;
 }
+
+function prevButtonClicked(element) {
+    let currStep = parseInt(element.getAttribute("data-current-step"));
+    if (currStep - 1 <= -1) {
+        return;
+    }
+    else {
+        let recipeObj = getRecipeById(targetRecipeID);    
+        let bodyDiv = document.getElementById("steps");
+
+        currStep--;
+        console.log(currStep);
+
+        element.setAttribute("data-current-step", "" + currStep);
+        document.getElementsByClassName("body_nav")[0].children[2].setAttribute("data-current-step", "" + (currStep));
+        bodyDiv.getElementsByClassName("body_zone")[0].children[0].innerText = recipeObj.bodies[currStep]; //body_text div
+        bodyDiv.getElementsByClassName("body_zone")[0].children[0].setAttribute("data-current-step", currStep);
+        document.getElementById("steps").children[0].setAttribute("data-current-step", currStep); //media_zone div
+        document.getElementsByClassName("step_count")[0].innerText = (currStep + 1)  +"/" + recipeObj.bodies.length;
+        
+        //Set image 
+        //TODO: SET VIDEO FOR IT TOO BUT HOW
+        if (getTargetMedia(currStep) != null && getTargetMedia(currStep).includes(".jpg")) {
+            document.getElementById("steps").children[0].children[0].setAttribute("src", "photos/" + getTargetMedia(currStep))
+        }
+        //Set step count nav bar
+    }
+}
+
+function nextButtonClicked(element) {
+    let currStep = parseInt(element.getAttribute("data-current-step"));
+    if (currStep + 1 >= getRecipeById(targetRecipeID).bodies.length) {
+        return;
+    }
+    else {
+        let recipeObj = getRecipeById(targetRecipeID);    
+        let bodyDiv = document.getElementById("steps");
+
+        currStep++;
+        console.log(currStep);
+
+        element.setAttribute("data-current-step", currStep);
+        document.getElementsByClassName("body_nav")[0].children[0].setAttribute("data-current-step", "" + (currStep));
+        bodyDiv.getElementsByClassName("body_zone")[0].children[0].innerText = recipeObj.bodies[currStep]; //body_text div
+        bodyDiv.getElementsByClassName("body_zone")[0].children[0].setAttribute("data-current-step", currStep);
+        document.getElementById("steps").children[0].setAttribute("data-current-step", currStep); //media_zone div
+        document.getElementsByClassName("step_count")[0].innerText = (currStep + 1) +"/" + recipeObj.bodies.length;
+        
+        //Set image 
+        //TODO: SET VIDEO FOR IT TOO BUT HOW
+        if (getTargetMedia(currStep) != null && getTargetMedia(currStep).includes(".jpg")) {
+            document.getElementById("steps").children[0].children[0].setAttribute("src", "photos/" + getTargetMedia(currStep))
+        }
+    }
+}
+
+/**
+ * Returns the media for the current body of text. Null if none is found.
+ * @param {*} step - body id
+ */
+function getTargetMedia(step) {
+    if (getRecipeById(targetRecipeID).media[step + ""] != null) {
+        return getRecipeById(targetRecipeID).media[step + ""];
+    }
+    else {
+        return null;
+    }
+}
+//#region Ingredients Substitution Logic
 
 /**
  * Show substitute divs with the substitutes of that specific element.
@@ -136,14 +242,14 @@ function showSubstitutes(element) {
         if (!substitutesDiv.classList.contains("disabled")) {
             substitutesDiv.classList.add("disabled");
         }
-        else{ //If the same was clicked as the last time but the substitute menu was disabled.
+        else { //If the same was clicked as the last time but the substitute menu was disabled.
             substitutesDiv.classList.remove("disabled");
             populateSubstitutes();
         }
     }
     else { //Different ingredient was clicked.
-        substitutesDiv.classList.remove("disabled");        
-        substitutesDiv.setAttribute("data-current-id", targetIngredientId);        
+        substitutesDiv.classList.remove("disabled");
+        substitutesDiv.setAttribute("data-current-id", targetIngredientId);
         populateSubstitutes();
     }
 
@@ -213,9 +319,13 @@ function substituteClicked(element) {
     element.innerText = targetIngredientDiv.innerText;
     targetIngredientDiv.innerText = newText;
 }
-
-function disableSubsMenu(){
-    if(!document.getElementsByClassName("substitutes")[0].classList.contains("disabled")){
+/**
+ * Closes the substitution menu. Should be called whenever the user clicks anything but a new ingredient item.
+ */
+function disableSubsMenu() {
+    if (!document.getElementsByClassName("substitutes")[0].classList.contains("disabled")) {
         document.getElementsByClassName("substitutes")[0].classList.add("disabled");
     }
 }
+
+//#endregion
