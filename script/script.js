@@ -150,8 +150,24 @@ function populateRecipeSite(id) {
     bodyDiv.getElementsByClassName("body_zone")[0].children[0].innerText = recipeObj.bodies[0]; //body_text div
     bodyDiv.getElementsByClassName("body_zone")[0].children[0].setAttribute("data-current-step", 0);
     document.getElementById("steps").children[0].setAttribute("data-current-step", 0); //media_zone div
+
+    //Media loading part
+
     if (getTargetMedia(0).includes(".jpg")) {
-        document.getElementById("steps").children[0].children[0].setAttribute("src", "photos/" + getTargetMedia(0))
+        document.getElementById("steps").children[0].children[0].remove(); //Removes current media    
+        let img = document.createElement("img");
+        img.setAttribute("src", "photos/" + getTargetMedia(0));
+        document.getElementById("steps").children[0].append(img);
+    }
+    else if (getTargetMedia(0).includes(".mp4")) {
+        document.getElementById("steps").children[0].children[0].remove(); //Removes current media    
+        let video = document.createElement("video");
+        let source = document.createElement("source");
+        video.append("source");
+        source.setAttribute("src", "videos/" + getTargetMedia(0));
+        // document.getElementById("steps").children[0].children[0].setAttribute("src", "")
+        document.getElementById("steps").children[0].append(video);
+
     }
     //Set step count nav bar
     document.getElementsByClassName("step_count")[0].innerText = "1/" + recipeObj.bodies.length;
@@ -167,21 +183,32 @@ function prevButtonClicked(element) {
         let bodyDiv = document.getElementById("steps");
 
         currStep--;
-        console.log(currStep);
+        // console.log(currStep);
 
         element.setAttribute("data-current-step", "" + currStep);
         document.getElementsByClassName("body_nav")[0].children[2].setAttribute("data-current-step", "" + (currStep));
         bodyDiv.getElementsByClassName("body_zone")[0].children[0].innerText = recipeObj.bodies[currStep]; //body_text div
         bodyDiv.getElementsByClassName("body_zone")[0].children[0].setAttribute("data-current-step", currStep);
         document.getElementById("steps").children[0].setAttribute("data-current-step", currStep); //media_zone div
-        document.getElementsByClassName("step_count")[0].innerText = (currStep + 1)  +"/" + recipeObj.bodies.length;
-        
-        //Set image 
-        //TODO: SET VIDEO FOR IT TOO BUT HOW
-        if (getTargetMedia(currStep) != null && getTargetMedia(currStep).includes(".jpg")) {
-            document.getElementById("steps").children[0].children[0].setAttribute("src", "photos/" + getTargetMedia(currStep))
+        document.getElementsByClassName("step_count")[0].innerText = (currStep + 1) + "/" + recipeObj.bodies.length;
+
+        //Media loading part
+
+        if (getTargetMedia(currStep).includes(".jpg")) {
+            document.getElementById("steps").children[0].children[0].remove(); //Removes current media        
+            let img = document.createElement("img");
+            img.setAttribute("src", "photos/" + getTargetMedia(currStep));
+            document.getElementById("steps").children[0].append(img);
         }
-        //Set step count nav bar
+        else if (getTargetMedia(currStep).includes(".mp4")) {
+            document.getElementById("steps").children[0].children[0].remove(); //Removes current media        
+            let video = document.createElement("video");
+            video.controls = true;
+            let source = "<source src=\"videos/" + getTargetMedia(currStep) + "\" type=\"video/mp4\">"
+            console.log(source);
+            video.innerHTML = source;
+            document.getElementById("steps").children[0].append(video);
+        }
     }
 }
 
@@ -204,10 +231,20 @@ function nextButtonClicked(element) {
         document.getElementById("steps").children[0].setAttribute("data-current-step", currStep); //media_zone div
         document.getElementsByClassName("step_count")[0].innerText = (currStep + 1) + "/" + recipeObj.bodies.length;
 
-        //Set image 
-        //TODO: SET VIDEO FOR IT TOO BUT HOW
-        if (getTargetMedia(currStep) != null && getTargetMedia(currStep).includes(".jpg")) {
-            document.getElementById("steps").children[0].children[0].setAttribute("src", "photos/" + getTargetMedia(currStep))
+        //Media loading part
+        if (getTargetMedia(currStep).includes(".jpg")) {
+            document.getElementById("steps").children[0].children[0].remove(); //Removes current media
+            let img = document.createElement("img");
+            img.setAttribute("src", "photos/" + getTargetMedia(currStep));
+            document.getElementById("steps").children[0].append(img);
+        }
+        else if (getTargetMedia(currStep).includes(".mp4")) {
+            document.getElementById("steps").children[0].children[0].remove(); //Removes current media            
+            let video = document.createElement("video"); //Creates video element
+            video.controls = true; //Allow it to be paused/played
+            let source = "<source src=\"videos/" + getTargetMedia(currStep) + "\" type=\"video/mp4\">" //Create source element
+            video.innerHTML = source; //Add source to video
+            document.getElementById("steps").children[0].append(video);
         }
     }
 }

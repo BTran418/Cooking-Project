@@ -75,7 +75,7 @@
         ],
         "media": {
             "0": "cook1.jpg",
-            "1": "cook2.jpg",
+            "1": "pad_thai.mp4",
             "2": "cook1.jpg",
             "3": "cook2.jpg",
             "4": "cook1.jpg",
@@ -90,61 +90,28 @@
             "ingredient2",
             "ingredient3"
         ],
-        "skills": [
-            "skill1",
-            "skill2",
-            "skill3"
-        ],
-        "equipment": [
-            "equipment1",
-            "equipment2",
-            "equipment3"
-        ],
-        "stepAmount": 5,
-        "bodies": [
-            "This is the first part",
-            "This is the second part",
-            "This is the third part",
-            "This is the fourth part",
-            "This is the fifth part"
-        ]
-    },
-    {
-        "title": "AnotherRecipeTitle",
-        "author": "AnotherRecipeAuthor",
-        "ingredients": [
-            "ingredient1",
-            "ingredient2",
-            "ingredient3"
-        ],
-        "skills": [
-            "skill1",
-            "skill2",
-            "skill3"
-        ],
-        "equipment": [
-            "equipment1",
-            "equipment2",
-            "equipment3"
-        ],
-        "stepAmount": 5,
-        "bodies": [
-            "This is the first part",
-            "This is the second part",
-            "This is the third part",
-            "This is the fourth part",
-            "This is the fifth part"
-        ],
         "substitutes": {
-            "1": [
-                "A",
-                "B",
-                "C"
-            ],
-            "2": [
-                "D",
-                "F"
-            ]
+            "0":[]
+        },
+        "skills": [
+            "skill1",
+            "skill2",
+            "skill3"
+        ],
+        "equipment": [
+            "equipment1",
+            "equipment2",
+            "equipment3"
+        ],
+        "bodies": [
+            "This is the first part",
+            "This is the second part",
+            "This is the third part",
+            "This is the fourth part",
+            "This is the fifth part"
+        ],
+        "media": {
+            "0": ""
         }
     }
 ]
