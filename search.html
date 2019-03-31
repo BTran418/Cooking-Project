@@ -13,16 +13,16 @@
     <div id="black_alpha"></div>
     <div class="navbar">
     <header><h1>Cooking Instructor</h1></header>
-        <a href="#home">Home</a>
-        <a href="#articles">Articles</a>
-        <a href="#videos">Videos</a>
-        <a href="#news">Search</a>
+        <a href="index.html">Home</a>
+        <a href="articles.html">Articles</a>
+        <a href="video.html">Videos</a>
+        <a href="search.html">Search</a>
         <div class="dropdown">
             <button class="dropbtn">Tags</button>
             <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+                <a href="#">Gluten Free</a>
+                <a href="#">Vegan</a>
+                <a href="#">Beef</a>
             </div>
         </div> 
         <a id="login" href="#login">Login</a>
@@ -32,26 +32,24 @@
         <div class="spacer"></div>
         <div class="container">
             <div id="search_title"><h2>Search By:</h2></div>
-            <form action="">
-                <input class="btn" type="button" value="Tags">
-                <input class="btn" type="button" value="Text">
-            </form>
+            <div id="search_btns">
+                <form action="">
+                    <input class="btn" type="button" value="Tags">
+                    <input class="btn" type="button" value="Text">
+                    <div><input type="text" name="search_box" id="search_criteria"></div>
+                </form>
+            </div>
         </div>
         <div class="spacer"></div>
-        <div class="container">
-            <div id="search_title"><h2>Search By:</h2></div>
-            <form action="">
-                <input class="btn" type="button" value="Tags">
-                <input class="btn" type="button" value="Text">
-            </form>
-            <div id="search_field">
-                <input type="text" name="search_box" id="search_box">
+        <!-- Results container for getting search results -->
+        <div class="results_container">
+            <div id="results_title"><h2>Results</h2></div>
+            <div id="tags_div">
+                <!-- div for the found results -->
+                <div id="result"></div> 
             </div>
-            <div id="tags">
-
-            </div>
-            <div class="container" id="search_results"></div>
         </div>
     </div>
 </body>
 </html>
+

@@ -3,7 +3,25 @@
 }
 
 .container {
-    height: 40rem;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    height: 30rem;
     background-color: #333;
 }
 
+#results_div {
+    display: flex;
+    align-self: center;
+    height: 16rem;
+    border: .1px solid black;
+    width: 80%;
+}
+
+.results_container {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    height: 30rem;
+    background-color: #333;
+}
