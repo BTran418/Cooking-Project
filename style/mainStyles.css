@@ -1,9 +1,3 @@
-#trendingVideos {
-    margin: auto;
-    background-color: #333;
-    color: snow;
-}
-
 #WeeklyRecipe {
     height: 20rem;
     width: 20rem;
@@ -14,15 +8,17 @@
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    color: white;
     height: 28rem;
     background-color: white;
     color: #333
 }
 
 .container2{
+    padding-top: 5px;
+    text-align: center;
+    color: white;
     background-color: #333;
-    height: 30rem;
+    height: 28rem;
 }
 
 /* Video Player*/
