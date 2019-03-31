@@ -80,7 +80,10 @@
             "3": "cook2.jpg",
             "4": "cook1.jpg",
             "5": "cook2.jpg"
-        }
+        },
+        "tags": [
+            "veggies"
+        ]
     },
     {
         "title": "Teriyaki Chicken",
@@ -91,9 +94,7 @@
             "1 cup soy sauce (240ml)",
             "1/2 cup brown sugar (110g)"
         ],
-        "substitutes": {
-           
-        },
+        "substitutes": {},
         "skills": [
             "Slicing chicken"
         ],
@@ -120,7 +121,10 @@
             "6": "browned_chicken.jpg",
             "7": "toss_chicken.jpg",
             "8": "plate_chicken.jpg"
-        }
+        },
+        "tags": [
+            "veggies"
+        ]
     },
     {
         "title": "Stuffed Eggplant",
@@ -203,7 +207,10 @@
             "3": "cook2.jpg",
             "4": "cook1.jpg",
             "5": "cook2.jpg"
-        }
+        },
+        "tags": [
+            "veggies"
+        ]
     },
     {
         "title": "Chilli Glazed Salmon",
@@ -215,13 +222,14 @@
             "1/4 fresh chopped scallions"
         ],
         "substitutes": {
-            "1":["Tuna"]
-            
+            "1": [
+                "Tuna"
+            ]
         },
         "skills": [
             "Chopping vegetables",
             "Using an oven"
-                ],
+        ],
         "equipment": [
             "Oven",
             "Knife",
@@ -238,26 +246,20 @@
         "media": {
             "0": "glazed_salmon.jpg",
             "1": "glazed_salmon.mp4"
-        }
+        },
+        "tags": [
+            "veggies"
+        ]
     },
     {
         "title": "Roasted Potato",
         "author": "",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        "ingredients": [
-           
-        ],
-        "substitutes": {
-            
-        },
-        "skills": [
-            
-        ],
-        "equipment": [
-            
-        ],
-        "bodies": [
-        ],
+        "ingredients": [],
+        "substitutes": {},
+        "skills": [],
+        "equipment": [],
+        "bodies": [],
         "media": {
             "0": "roasted_potatoes.jpg",
             "1": "roasted_potatoes.mp4"
@@ -267,139 +269,102 @@
         "title": "Rosemary Lamb Chops",
         "author": "",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        "ingredients": [
-           
-        ],
-        "substitutes": {
-            
-        },
-        "skills": [
-            
-        ],
-        "equipment": [
-            
-        ],
-        "bodies": [
-        ],
+        "ingredients": [],
+        "substitutes": {},
+        "skills": [],
+        "equipment": [],
+        "bodies": [],
         "media": {
             "0": "rosemary_lamb.jpg",
             "1": "lamb_chops.mp4"
-        }
+        },
+        "tags": [
+            "veggies"
+        ]
     },
     {
         "title": "Tonkatsu Ramen",
         "author": "",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        "ingredients": [
-           
-        ],
-        "substitutes": {
-            
-        },
-        "skills": [
-            
-        ],
-        "equipment": [
-            
-        ],
-        "bodies": [
-        ],
+        "ingredients": [],
+        "substitutes": {},
+        "skills": [],
+        "equipment": [],
+        "bodies": [],
         "media": {
             "0": "tonkatsu_ramen.jpg",
             "1": "ramen.mp4"
-        }
+        },
+        "tags": [
+            "veggies"
+        ]
     },
     {
         "title": "Mac and Cheese",
         "author": "",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        "ingredients": [
-           
-        ],
-        "substitutes": {
-            
-        },
-        "skills": [
-            
-        ],
-        "equipment": [
-            
-        ],
-        "bodies": [
-        ],
+        "ingredients": [],
+        "substitutes": {},
+        "skills": [],
+        "equipment": [],
+        "bodies": [],
         "media": {
             "0": "mac_cheese.jpg",
             "1": "mac_cheese.mp4"
-        }
+        },
+        "tags": [
+            "veggies"
+        ]
     },
     {
         "title": "Rissoto",
         "author": "",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        "ingredients": [
-           
-        ],
-        "substitutes": {
-            
-        },
-        "skills": [
-            
-        ],
-        "equipment": [
-            
-        ],
-        "bodies": [
-        ],
+        "ingredients": [],
+        "substitutes": {},
+        "skills": [],
+        "equipment": [],
+        "bodies": [],
         "media": {
             "0": "risotto.jpg",
             "1": "risotto.mp4"
-        }
+        },
+        "tags": [
+            "veggies"
+        ]
     },
     {
         "title": "Spring Rolls",
         "author": "",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        "ingredients": [
-           
-        ],
-        "substitutes": {
-            
-        },
-        "skills": [
-            
-        ],
-        "equipment": [
-            
-        ],
-        "bodies": [
-        ],
+        "ingredients": [],
+        "substitutes": {},
+        "skills": [],
+        "equipment": [],
+        "bodies": [],
         "media": {
             "0": "spring_roll.jpg",
             "1": "springroll.mp4"
-        }
+        },
+        "tags": [
+            "veggies"
+        ]
     },
     {
         "title": "Mash Potato",
         "author": "",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        "ingredients": [
-           
-        ],
-        "substitutes": {
-            
-        },
-        "skills": [
-            
-        ],
-        "equipment": [
-            
-        ],
-        "bodies": [
-        ],
+        "ingredients": [],
+        "substitutes": {},
+        "skills": [],
+        "equipment": [],
+        "bodies": [],
         "media": {
             "0": "mash.jpg",
             "1": "mash_potato.mp4"
-        }
+        },
+        "tags": [
+            "veggies"
+        ]
     }
 ]
-

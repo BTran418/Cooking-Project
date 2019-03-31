@@ -21,15 +21,15 @@ function searchByText(search){
     results = [];
     let searchResults = [];
 
+    // for(let i = 0; i < jsonObjects.length; i++){
+    //     for(let j = 0; j < jsonObjects[i].bodies.length; i++){
+    //         if(jsonObjects[i].bodies[j].includes(search)){
+    //             searchResults.push(jsonObjects[i]);
+    //         }
+    //     }
+    // }
     for(let i = 0; i < jsonObjects.length; i++){
-        for(let j = 0; j < jsonObjects[i].bodies.length; i++){
-            if(jsonObjects[i].bodies[j].includes(search)){
-                searchResults.push(jsonObjects[i]);
-            }
-        }
-    }
-    for(let i = 0; i < jsonObjects.length; i++){
-        if(jsonObjects[i]['description'].includes(search)){
+        if(jsonObjects[i]['description'].includes(search) || jsonObjects[i]['title'].includes(search)){
             searchResults.push(jsonObjects[i]);
         }
     }
@@ -38,7 +38,7 @@ function searchByText(search){
 }
 
 function searchByTag(){
-
+    results = [];
 }
 
 function populateResults(recipe){
