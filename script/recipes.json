@@ -75,7 +75,7 @@
         ],
         "media": {
             "0": "cook1.jpg",
-            "1": "cook2.jpg",
+            "1": "eggplant.mp4",
             "2": "cook1.jpg",
             "3": "cook2.jpg",
             "4": "cook1.jpg",
@@ -112,13 +112,14 @@
         ],
         "media": {
             "0": "honey_chicken.jpg",
-            "1": "sliced_chicken.jpg",
-            "2": "marinate_chicken.jpg",
-            "3": "cook_chicken.jpg",
-            "4": "flip_chicken.jpg",
-            "5": "browned_chicken.jpg",
-            "6": "toss_chicken.jpg",
-            "7": "plate_chicken.jpg"
+            "1": "terriyaki_chicken.mp4",
+            "2": "sliced_chicken.jpg",
+            "3": "marinate_chicken.jpg",
+            "4": "cook_chicken.jpg",
+            "5": "flip_chicken.jpg",
+            "6": "browned_chicken.jpg",
+            "7": "toss_chicken.jpg",
+            "8": "plate_chicken.jpg"
         }
     },
     {
@@ -197,7 +198,7 @@
         ],
         "media": {
             "0": "stuffed_eggplant.jpg",
-            "1": "cook2.jpg",
+            "1": "stuffed_eggplant.mp4",
             "2": "cook1.jpg",
             "3": "cook2.jpg",
             "4": "cook1.jpg",
@@ -235,7 +236,8 @@
             "Bake for 12-15 minutes until fish is cooked but still tender"
         ],
         "media": {
-            "0": "glazed_salmon.jpg"
+            "0": "glazed_salmon.jpg",
+            "1": "glazed_salmon.mp4"
         }
     },
     {
@@ -257,7 +259,8 @@
         "bodies": [
         ],
         "media": {
-            "0": "roasted_potatoes.jpg"
+            "0": "roasted_potatoes.jpg",
+            "1": "roasted_potatoes.mp4"
         }
     },
     {
@@ -279,7 +282,8 @@
         "bodies": [
         ],
         "media": {
-            "0": "rosemary_lamb.jpg"
+            "0": "rosemary_lamb.jpg",
+            "1": "lamb_chops.mp4"
         }
     },
     {
@@ -301,7 +305,8 @@
         "bodies": [
         ],
         "media": {
-            "0": "tonkatsu_ramen.jpg"
+            "0": "tonkatsu_ramen.jpg",
+            "1": "ramen.mp4"
         }
     },
     {
@@ -323,7 +328,8 @@
         "bodies": [
         ],
         "media": {
-            "0": "mac_cheese.jpg"
+            "0": "mac_cheese.jpg",
+            "1": "mac_cheese.mp4"
         }
     },
     {
@@ -345,7 +351,8 @@
         "bodies": [
         ],
         "media": {
-            "0": "risotto.jpg"
+            "0": "risotto.jpg",
+            "1": "risotto.mp4"
         }
     },
     {
@@ -367,7 +374,8 @@
         "bodies": [
         ],
         "media": {
-            "0": "spring_roll.jpg"
+            "0": "spring_roll.jpg",
+            "1": "springroll.mp4"
         }
     },
     {
@@ -389,7 +397,8 @@
         "bodies": [
         ],
         "media": {
-            "0": "mash.jpg"
+            "0": "mash.jpg",
+            "1": "mash_potato.mp4"
         }
     }
 ]

@@ -35,9 +35,9 @@
 }
 .individual_result{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
-    width: 80%;
+    min-width: 80%;
 }
 .media{
     margin: 1rem;
@@ -47,4 +47,8 @@
 }
 .recipe_title{
     font-size: 1.5rem;
+    min-width: 45rem;
+}
+.recipe_text{
+    max-width: 30rem;
 }
