@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="icon" href="/knifefork.ico">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/searchStyle.css">
+    <script src="script/search.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Search</title>
 </head>
+
 <body>
     <div id="black_alpha"></div>
     <div class="navbar">
-    <header><h1>Cooking Instructor</h1></header>
+        <header>
+            <h1>Cooking Instructor</h1>
+        </header>
         <a href="index.html">Home</a>
         <a href="articles.html">Recipes</a>
         <a href="search.html">Search</a>
@@ -23,14 +28,16 @@
                 <a href="search.html">Seafood</a>
                 <a href="search.html">Chicken</a>
             </div>
-        </div> 
+        </div>
         <a id="login" href="#login">Login</a>
         <a id="signup" href="#SignUp">Sign Up</a>
     </div>
     <div id="main">
         <div class="spacer"></div>
         <div class="container">
-            <div id="search_title"><h2>Search By:</h2></div>
+            <div id="search_title">
+                <h2>Search By:</h2>
+            </div>
             <div id="search_btns">
                 <form action="">
                     <input class="btn" type="button" value="Tags">
@@ -43,13 +50,23 @@
         <div class="spacer"></div>
         <!-- Results container for getting search results -->
         <div class="results_container">
-            <div id="results_title"><h2>Results</h2></div>
+            <div id="results_title">
+                <h2>Results</h2>
+            </div>
             <div id="tags_div">
                 <!-- div for the found results -->
-                <div id="result"></div> 
+                <div id="result">
+                    <div class="individual_result">
+                        <div class="media"><img width="320" src="photos/toss_chicken.jpg"></div>
+                        <div class="description">
+                            <div class="recipe_title">TITLE</div>
+                            <div class="recipe_text">This is a description</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </body>
-</html>
 
+</html>

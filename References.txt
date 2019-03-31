@@ -14,3 +14,27 @@ Images -
 https://www.budgetbytes.com/honey-balsamic-chicken-tenders/
 ^ Sliced chicken
 -Image of the chicken in the pan is a screenshot of the video accompanying the recipe
+
+Glazed Salmon
+https://www.onceuponachef.com/images/2011/10/Thai-Chili-Glazed-Salmon-1-1024x699-1-760x519.jpg
+
+Roasted Potatos
+https://www.seriouseats.com/recipes/images/2016/12/20161201-crispy-roast-potatoes-29-1500x1125.jpg
+
+Rosemary Lamb
+https://downshiftology.com/wp-content/uploads/2016/03/rosemary-grilled-lamb-chops-with-mint-apple-sauce-7.jpg
+
+Stuffed Eggplant
+data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/
+
+Tonkatsu Ramen
+https://www.seriouseats.com/images/20120227-tonkotsu-ramen-broth-pork-fat-01a.jpg
+
+Mac and Cheese
+https://feastandfarm.com/wp-content/uploads/macandcheese.jpg
+
+Risotto
+https://du7ybees82p4m.cloudfront.net/53b2b28576c4a5.41487401.jpg?width=910&height=512
+
+Mash Potatos
+https://www.gimmesomeoven.com/wp-content/uploads/2012/11/hummus-mashed-potatoes-1.jpg

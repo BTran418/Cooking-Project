@@ -50,7 +50,21 @@
     justify-content: center;
     flex-direction: row;
 }
-
+.image_container{
+    overflow: hidden;
+    max-height: 100%;
+}
+.image_container img{
+    display: inline-block;
+}
+/* .v-container{
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+}
+.v-container img{
+ */
+/* } */
 /* 
 .controls {
     display: flex;

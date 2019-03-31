@@ -22,6 +22,29 @@
     display: flex;
     align-self: center;
     flex-direction: column;
-    height: 30rem;
+    min-height: 30rem;
     background-color: #333;
+}
+#result{
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: snow;
+    min-height: 16rem;
+}
+.individual_result{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 80%;
+}
+.media{
+    margin: 1rem;
+}
+.description{
+    margin: 1rem;
+}
+.recipe_title{
+    font-size: 1.5rem;
 }

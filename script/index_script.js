@@ -43,22 +43,21 @@ function populateTrending(){
     for(let i = 0; i < videoContainers.length; i++){
         //Set name
         videoContainers[i].children[0].children[0].innerText = chosenRecipes[i].title;
-        console.log(videoContainers[i].children[1].children[0].children);
 
         //Set media
         let mediaSource = null;
         if(chosenRecipes[i].media[0].includes('.mp4')){
            mediaSource = 'videos/' + chosenRecipes[i].media[0];
-           videoContainers[i].children[1].children[0].children[0].setAttribute('src', chosenRecipes[i].media[0]);
-           videoContainers[i].children[1].children[0].children[1].setAttribute('style','display:none;');
+           videoContainers[i].children[1].children[0].children[0].setAttribute('src', mediaSource);
+           videoContainers[i].children[1].children[0].children[1].children[0].setAttribute('style','display:none;');
            videoContainers[i].children[1].children[0].children[0].setAttribute('style','');
 
         }
         else{
            mediaSource = 'photos/' + chosenRecipes[i].media[0];
-           videoContainers[i].children[1].children[0].children[1].setAttribute('src', chosenRecipes[i].media[0]);
+           videoContainers[i].children[1].children[0].children[1].children[0].setAttribute('src', mediaSource);
            videoContainers[i].children[1].children[0].children[0].setAttribute('style','display:none;');
-           videoContainers[i].children[1].children[0].children[1].setAttribute('style','');
+           videoContainers[i].children[1].children[0].children[1].children[0].setAttribute('style','');
         }
         // videoContainers[i].children[1].children[0].children[0].setAttribute('src', chosenRecipes[i].media[0]);
 
