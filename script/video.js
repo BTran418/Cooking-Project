@@ -1,7 +1,7 @@
 //JAVASCRIPT FOR VIDEO PLAYER
-var video = document.querySelector('.video');
-var progress_bar = document.querySelector('.progress_bar');
-var control_btn = document.getElementById('play_pause');
+let video = document.querySelector('.video');
+let progress_bar = document.querySelector('.progress_bar');
+let control_btn = document.getElementById('play_pause');
 
 function togglePlayPause() {
     if(video.paused){

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="script/video.js"></script>
     <link rel="icon" href="/knifefork.ico">
-    <script src="script/script.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="script/index_script.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/mainStyles.css">
     <meta charset="UTF-8">
@@ -13,22 +15,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cooking Instructor</title>
 </head>
+
 <body>
     <div id="black_alpha"></div>
     <div class="navbar">
-    <header><h1>Cooking Instructor</h1></header>
+        <header>
+            <h1>Cooking Instructor</h1>
+        </header>
         <a href="index.html">Home</a>
-        <a href="articles.html">Articles</a>
+        <a href="#articles">Articles</a>
         <a href="videos.html">Videos</a>
         <a href="search.html">Search</a>
         <div class="dropdown">
             <button class="dropbtn">Tags</button>
             <div class="dropdown-content">
-                <a href="#">Gluten Free</a>
-                <a href="#">Vegan</a>
-                <a href="#">Beef</a>
+                <a href="search.html">Gluten Free</a>
+                <a href="search.html">Vegan</a>
+                <a href='search.html'>Beef</a>
             </div>
-        </div> 
+        </div>
         <a id="login" href="#login">Login</a>
         <a id="signup" href="#SignUp">Sign Up</a>
     </div>
@@ -36,16 +41,22 @@
         <div class="spacer"></div>
         <div class="container">
             <div id="ROW">
-                <div><h1>Recipe of the Week</h1></div>
+                <div>
+                    <h1>Recipe of the Week</h1>
+                </div>
                 <img id="WeeklyRecipe" src="\photos\pad_thai.jpg" alt="Pad Thai">
             </div>
         </div>
         <div class="spacer"></div>
         <div class="container2">
-            <div class="trending_title"><h1>Trending</h1></div>
+            <div class="trending_title">
+                <h1>Trending</h1>
+            </div>
             <div id="videos">
                 <div class="a_video">
-                    <div class="recipe_title"><h2>Pad Thai</h2></div>
+                    <div class="recipe_title">
+                        <h2>Pad Thai</h2>
+                    </div>
                     <div class="video_container">
                         <div class="v-containter">
                             <video class="video" src="/videos/pad_thai.mp4" controls></video>
@@ -53,7 +64,9 @@
                     </div>
                 </div>
                 <div class="a_video">
-                    <div class="recipe_title"><h2>Pad Thai</h2></div>
+                    <div class="recipe_title">
+                        <h2>Pad Thai</h2>
+                    </div>
                     <div class="video_container">
                         <div class="v-containter">
                             <video class="video" src="/videos/pad_thai.mp4" controls></video>
@@ -61,7 +74,9 @@
                     </div>
                 </div>
                 <div class="a_video">
-                    <div class="recipe_title"><h2>Pad Thai</h2></div>
+                    <div class="recipe_title">
+                        <h2>Pad Thai</h2>
+                    </div>
                     <div class="video_container">
                         <div class="v-containter">
                             <video class="video" src="/videos/pad_thai.mp4" controls></video>
@@ -69,18 +84,12 @@
                     </div>
                 </div>
                 <div class="a_video">
-                    <div class="recipe_title"><h2>Pad Thai</h2></div>
+                    <div class="recipe_title">
+                        <h2>Pad Thai</h2>
+                    </div>
                     <div class="video_container">
                         <div class="v-containter">
-                            <video class="video" src="/videos/pad_thai.mp4"></video>
-                            <div class="controls">
-                                <div class="progress_bar">
-                                    <div class="red_bar"></div>
-                                </div>
-                                <div class="buttons">
-                                    <button id="play_pause"></button>
-                                </div>
-                            </div>
+                            <video class="video" src="/videos/pad_thai.mp4" controls></video>
                         </div>
                     </div>
                 </div>
@@ -88,6 +97,7 @@
         </div>
     </div>
 </body>
+
 </html>
 
 
@@ -111,7 +121,6 @@
 
 <!-- REFERENCES FOR VIDEO 
 - https://www.youtube.com/watch?v=m88rF0rwHo8 (Pad Thai, Cooking with Poo)
-
 
 
 -->

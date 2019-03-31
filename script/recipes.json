@@ -83,35 +83,37 @@
         }
     },
     {
-        "title": "AnotherRecipeTitle",
-        "author": "AnotherRecipeAuthor",
+        "title": "3 Ingredient Chilli Glazed Salmon",
+        "author": "Alvin Zhou - Tasty",
         "ingredients": [
-            "ingredient1",
-            "ingredient2",
-            "ingredient3"
+            "3 Salmon fillets - 4 oz",
+            "1/2 cup chilli sauce - 130g",
+            "1/4 fresh chopped scallions"
         ],
         "substitutes": {
-            "0":[]
+            "1":["Tuna"]
+            
         },
         "skills": [
-            "skill1",
-            "skill2",
-            "skill3"
-        ],
+            "Chopping vegetables",
+            "Using an oven"
+                ],
         "equipment": [
-            "equipment1",
-            "equipment2",
-            "equipment3"
+            "Oven",
+            "Knife",
+            "Oven safe baking dish"
         ],
         "bodies": [
-            "This is the first part",
-            "This is the second part",
+            "Preheat the oven to 400F (200C)",
+            "Chop the scallions",
             "This is the third part",
             "This is the fourth part",
             "This is the fifth part"
         ],
         "media": {
-            "0": ""
+            "1": "https://www.youtube.com/watch?v=sPbcZvit3tg"
+            "2": "https://youtu.be/5T4KHDvJxQk?t=4"
         }
     }
 ]
+
