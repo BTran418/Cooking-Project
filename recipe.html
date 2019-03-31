@@ -37,20 +37,20 @@
         <div class="spacer"></div>
         <div class="container" id="top">
             <div class="recipe_title">
-                    <h1 class="recipe_title_text">Recipe Title</h1>
+                <h1 class="recipe_title_text">Recipe Title</h1>
             </div>
             <div class="container">
-            <div class="container_box" id="ingredients">
-                <h1>Ingredients</h1>
-                <!-- <div class="container_item" onclick="showSubstitutes(this)"><div class="item_text">1 large eggplant</div></div> -->
+                <div class="container_box" id="ingredients">
+                    <h1>Ingredients</h1>
+                    <!-- <div class="container_item" onclick="showSubstitutes(this)"><div class="item_text">1 large eggplant</div></div> -->
+                </div>
+                <div class="container_box" id="skills">
+                    <h1>Skills</h1>
+                </div>
+                <div class="container_box" id="equipment">
+                    <h1>Equipment</h1>
+                </div>
             </div>
-            <div class="container_box" id="skills">
-                <h1>Skills</h1>
-            </div>
-            <div class="container_box" id="equipment">
-                <h1>Equipment</h1>
-            </div>
-        </div>
         </div>
         <div class="spacer"></div>
         <div class="container2">
@@ -61,7 +61,8 @@
                 <div class="media_zone" data-current-step="0">
                     <img src="photos/cook1.jpg"></div>
                 <div class="body_zone">
-                    <div class="body_text" data-current-step="0">This is a test message. If you are seeing this something is clearly wrong. Fix it.</div>
+                    <div class="body_text" data-current-step="0">This is a test message. If you are seeing this
+                        something is clearly wrong. Fix it.</div>
                     <div class="body_nav">
                         <button onclick="prevButtonClicked(this)" data-current-step="0">Prev</button>
                         <div class="step_count">1/1</div>
@@ -72,13 +73,23 @@
         </div>
         <div class="spacer"></div>
         <div class="container3">
-                <div class="discussion_title">
-                    <h1>Comments</h1>
-                </div>
-                <div id="comments">
-    
+            <div class="discussion_title">
+                <h1>Comments</h1>
+            </div>
+            <div class="all_comments">
+                <!-- <div class="comment_pack">
+                    <div class="individual_author">Fools Name</div>
+                    <div class="individual_comment">I'm a comment on this recipe. I'm a comment on this recipe. I'm a
+                        comment on this recipe. I'm a comment on this recipe.</div>
+                </div> -->
+            </div>
+            <div id="comments">
+                <textarea id="user_comment" cols="30" rows="10"></textarea>
+                <div>
+                    <button onclick="addComment()">Add comment!</button>
                 </div>
             </div>
+        </div>
     </div>
     <div class="substitutes disabled" data-current-id="-1">
         <div class="substitutes_title">substitutes</div>
