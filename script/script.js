@@ -12,6 +12,10 @@ window.onload = function () {
     request.send();
     request.onload = function () {
         jsonObjects = request.response; //Create recipe objects from a JSON file.
+        targetRecipeID = site.substring(site.indexOf("recipe-id=")).split('=')[1];
+        // let site = window.location.href;
+        // console.log(site.indexOf("recipe-id="));
+        // console.log(site.substring(site.indexOf("recipe-id=")).split('=')[1]);
         populateRecipeSite(targetRecipeID);
     }
 }
