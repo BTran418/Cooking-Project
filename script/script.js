@@ -12,10 +12,10 @@ window.onload = function () {
     request.send();
     request.onload = function () {
         jsonObjects = request.response; //Create recipe objects from a JSON file.
-        // console.log(jsonFile["recipes"][0]);
-        // console.log(jsonFile["recipes"][2]["substitutes"]["1"][0]);
-        // console.log(jsonObjects);
-        // recipeManager();
+        let site = window.location.href;
+        targetRecipeID = site.substring(site.indexOf("recipe-id=")).split('=')[1]; //Assign recipe ID
+        // console.log(site.indexOf("recipe-id="));
+        // console.log(site.substring(site.indexOf("recipe-id=")).split('=')[1]);
         populateRecipeSite(targetRecipeID);
     }
 }
@@ -27,47 +27,6 @@ function searchByString(string) {
 function searchByTags(tags) {
 
 }
-
-//Populates the current recipe page.
-// function recipeManager() {
-//     let author = document.getElementById("recipe_author");
-//     let ingredients = document.getElementById("recipe_ingredients");
-//     let skills = document.getElementById("recipe_skills");
-//     let body = document.getElementById("recipe_body");
-
-//     author.innerText = jsonObjects["recipes"][0].author;
-
-//     for(let i = 0; i < jsonObjects["recipes"][0].ingredients.length; i++){
-
-//         ingredients.innerHTML += jsonObjects["recipes"][0].ingredients[i] + "<br>";
-//     }
-//     ingredients.innerHTML += "<br>"
-
-//     skills.innerText = jsonObjects["recipes"][0].skills;
-//     body.innerText = jsonObjects["recipes"][0].bodies[0];
-// }
-
-//TODO: Delete this after maybe?
-// /**
-//  * Populates with the next body.
-//  */
-// function nextBody() {
-//     let body = document.getElementById("recipe_body");
-//     let current = parseInt(body.getAttribute("data-current-part"));
-//     body.innerText = jsonObjects["recipes"][0].bodies[current + 1];
-//     body.setAttribute("data-current-part", current + 1);
-
-//     checkButtonsState(current);
-// }
-
-// function previousBody() {
-//     let body = document.getElementById("recipe_body");
-//     let current = parseInt(body.getAttribute("data-current-part"));
-//     body.innerText = jsonObjects["recipes"][0].bodies[current - 1];
-//     body.setAttribute("data-current-part", current - 1);
-
-//     checkButtonsState(current);
-// }
 
 /**
  * Returns specific recipe object.
@@ -175,6 +134,7 @@ function populateRecipeSite(id) {
 
 function prevButtonClicked(element) {
     let currStep = parseInt(element.getAttribute("data-current-step"));
+    //Check if there is more before  the current one    
     if (currStep - 1 <= -1) {
         return;
     }
@@ -214,6 +174,7 @@ function prevButtonClicked(element) {
 
 function nextButtonClicked(element) {
     let currStep = parseInt(element.getAttribute("data-current-step"));
+    //Check if there is more after the current one
     if (currStep + 1 >= getRecipeById(targetRecipeID).bodies.length) {
         return;
     }
@@ -366,3 +327,23 @@ function disableSubsMenu() {
 }
 
 //#endregion
+
+function addComment(){
+    //TODO: Check if there is login
+    let userComment = document.getElementById("user_comment").value;
+    
+    let commentPack = document.createElement('div');
+    commentPack.classList.add('comment_pack');
+    let individualAuthor = document.createElement('div');
+    individualAuthor.classList.add('individual_author');
+    let individualComment = document.createElement('div');
+    individualComment.classList.add('individual_comment');
+
+    commentPack.append(individualAuthor);
+    commentPack.append(individualComment);
+
+    document.getElementsByClassName('all_comments')[0].append(commentPack);
+
+    individualComment.innerText = userComment;
+    individualAuthor.innerText = 'USER_NAME'; //TODO: Get user name from login
+}
