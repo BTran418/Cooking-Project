@@ -51,11 +51,14 @@ function populateTrending(){
            mediaSource = 'videos/' + chosenRecipes[i].media[0];
            videoContainers[i].children[1].children[0].children[0].setAttribute('src', chosenRecipes[i].media[0]);
            videoContainers[i].children[1].children[0].children[1].setAttribute('style','display:none;');
+           videoContainers[i].children[1].children[0].children[0].setAttribute('style','');
+
         }
         else{
            mediaSource = 'photos/' + chosenRecipes[i].media[0];
            videoContainers[i].children[1].children[0].children[1].setAttribute('src', chosenRecipes[i].media[0]);
-           videoContainers[i].children[1].children[0].children[1].setAttribute('style','display:none;');
+           videoContainers[i].children[1].children[0].children[0].setAttribute('style','display:none;');
+           videoContainers[i].children[1].children[0].children[1].setAttribute('style','');
         }
         // videoContainers[i].children[1].children[0].children[0].setAttribute('src', chosenRecipes[i].media[0]);
 
