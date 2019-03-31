@@ -5,12 +5,9 @@ background-image: url("../photos/beauties.jpg");
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-<<<<<<< HEAD
 height: 100%;
 width: 100%;
-=======
 background-attachment: fixed;
->>>>>>> logical_js
 }
 
 #black_alpha {
