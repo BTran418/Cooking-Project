@@ -12,8 +12,8 @@ window.onload = function () {
     request.send();
     request.onload = function () {
         jsonObjects = request.response; //Create recipe objects from a JSON file.
-        targetRecipeID = site.substring(site.indexOf("recipe-id=")).split('=')[1];
-        // let site = window.location.href;
+        let site = window.location.href;
+        targetRecipeID = site.substring(site.indexOf("recipe-id=")).split('=')[1]; //Assign recipe ID
         // console.log(site.indexOf("recipe-id="));
         // console.log(site.substring(site.indexOf("recipe-id=")).split('=')[1]);
         populateRecipeSite(targetRecipeID);
@@ -27,7 +27,6 @@ function searchByString(string) {
 function searchByTags(tags) {
 
 }
-
 
 /**
  * Returns specific recipe object.
@@ -328,3 +327,23 @@ function disableSubsMenu() {
 }
 
 //#endregion
+
+function addComment(){
+    //TODO: Check if there is login
+    let userComment = document.getElementById("user_comment").value;
+    
+    let commentPack = document.createElement('div');
+    commentPack.classList.add('comment_pack');
+    let individualAuthor = document.createElement('div');
+    individualAuthor.classList.add('individual_author');
+    let individualComment = document.createElement('div');
+    individualComment.classList.add('individual_comment');
+
+    commentPack.append(individualAuthor);
+    commentPack.append(individualComment);
+
+    document.getElementsByClassName('all_comments')[0].append(commentPack);
+
+    individualComment.innerText = userComment;
+    individualAuthor.innerText = 'USER_NAME'; //TODO: Get user name from login
+}
