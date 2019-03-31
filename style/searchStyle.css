@@ -2,5 +2,8 @@
     width: 5rem;
 }
 
-
+.container {
+    height: 40rem;
+    background-color: #333;
+}
 

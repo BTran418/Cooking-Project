@@ -112,6 +112,7 @@ h1 {
 #top {
     display: flex;
     flex-direction: column;
+    height: 35rem;
 }
 
 .container2 {
