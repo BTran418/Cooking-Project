@@ -25,26 +25,29 @@
         <a href="index.html">Home</a>
         <a href="articles.html">Recipes</a>
         <a href="search.html">Search</a>
-        <div class="dropdown">
+        <!-- <div class="dropdown">
             <button class="dropbtn">Tags</button>
             <div class="dropdown-content">
                 <a href="search.html">Gluten Free</a>
                 <a href="search.html">Seafood</a>
                 <a href="search.html">Chicken</a>
             </div>
-        </div>
-        <a id="login" href="#login">Login</a>
-        <a id="signup" href="#SignUp">Sign Up</a>
+        </div> -->
+        <a id="login" onclick="loginBtnClicked()" href="#login">Login</a>
+        <!-- <a id="signup" href="#SignUp">Sign Up</a> -->
     </div>
     <div id="main">
         <div class="spacer"></div>
         <div class="container">
-            <div id="ROW">
-                <div>
-                    <h1>Recipe of the Week</h1>
+            <a href='recipe.html?recipe-id=0'>
+                <div id="ROW">
+                    <div>
+                        <h1>Recipe of the Week</h1>
+                        <h2>Roasted Eggplant Pastitsio</h2>
+                    </div>
+                    <img id="WeeklyRecipe" src="photos/pad_thai.jpg" alt="Pad Thai">
                 </div>
-                <img id="WeeklyRecipe" src="\photos\pad_thai.jpg" alt="Pad Thai">
-            </div>
+            </a>
         </div>
         <div class="spacer"></div>
         <div class="container2">
@@ -60,7 +63,8 @@
                         <div class="video_container">
                             <div class="v-containter">
                                 <video class="video" src="/videos/pad_thai.mp4" controls></video>
-                                <div class="image-container"><img width="320" height="180" style='display:none;' src="photos/cook1.jpg"></div>
+                                <div class="image-container"><img width="320" height="180" style='display:none;'
+                                        src="photos/cook1.jpg"></div>
                             </div>
                         </div>
                     </div>
@@ -73,7 +77,8 @@
                         <div class="video_container">
                             <div class="v-containter">
                                 <video class="video" src="/videos/pad_thai.mp4" controls></video>
-                                <div class="image-container"><img width="320" height="180" style='display:none;' src="photos/cook1.jpg"></div>
+                                <div class="image-container"><img width="320" height="180" style='display:none;'
+                                        src="photos/cook1.jpg"></div>
                             </div>
                         </div>
                     </div>
@@ -86,7 +91,8 @@
                         <div class="video_container">
                             <div class="v-containter">
                                 <video class="video" src="/videos/pad_thai.mp4" controls></video>
-                                <div class="image-container"><img width="320" height="180" style='display:none;' src="photos/cook1.jpg"></div>
+                                <div class="image-container"><img width="320" height="180" style='display:none;'
+                                        src="photos/cook1.jpg"></div>
                             </div>
                         </div>
                     </div>
@@ -99,7 +105,8 @@
                         <div class="video_container">
                             <div class="v-containter">
                                 <video class="video" src="/videos/pad_thai.mp4" controls></video>
-                                <div class="image-container"><img width="320" height="180" style='display:none;' src="photos/cook1.jpg"></div>
+                                <div class="image-container"><img width="320" height="180" style='display:none;'
+                                        src="photos/cook1.jpg"></div>
                             </div>
                         </div>
                     </div>
@@ -107,6 +114,17 @@
             </div>
         </div>
         <div class="spacer"></div>
+    </div>
+    <div class="login_part disabled">
+        <div class="blackness"></div>
+        <div class="login_window">
+            <h1>Login</h1>
+            <div class="email_login login_t">Email: <input type="text"></div>
+            <div class="password_login login_t">Password: <input type="text"></div>
+            <button onclick="acceptLoginClicked()">Login</button>
+            <button onclick="cancelLoginClicked()">Cancel</button>
+
+        </div>
     </div>
 </body>
 

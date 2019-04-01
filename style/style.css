@@ -101,3 +101,43 @@ background-color: #ddd;
 .dropdown:hover .dropdown-content {
 display: block;
 }
+
+.login_part{
+    display:flex;
+    position: fixed;
+    justify-content: center;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+.blackness{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.432);
+    z-index: -1;
+}
+.login_window{
+    display: flex;
+    flex-flow: column nowrap;
+    
+    align-items: center;
+    justify-content: center;
+    width: 50rem;
+    height: 30rem;
+    
+    align-self: center;
+
+    background-color: snow;
+}
+
+.login_t{
+    min-width: 10rem;
+}
+
+.disabled{
+    display:none;
+}

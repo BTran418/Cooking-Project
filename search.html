@@ -21,16 +21,16 @@
         <a href="index.html">Home</a>
         <a href="articles.html">Recipes</a>
         <a href="search.html">Search</a>
-        <div class="dropdown">
+        <!-- <div class="dropdown">
             <button class="dropbtn">Tags</button>
             <div class="dropdown-content">
                 <a href="search.html">Gluten Free</a>
                 <a href="search.html">Seafood</a>
                 <a href="search.html">Chicken</a>
             </div>
-        </div>
-        <a id="login" href="#login">Login</a>
-        <a id="signup" href="#SignUp">Sign Up</a>
+        </div> -->
+        <a id="login" onclick='loginBtnClicked()'>Login</a>
+        <!-- <a id="signup" href="#SignUp">Sign Up</a> -->
     </div>
     <div id="main">
         <div class="spacer"></div>
@@ -40,10 +40,28 @@
             </div>
             <div id="search_btns">
                 <form action="">
-                    <input class="btn" type="button" value="Tags">
-                    <input class="btn" type="button" value="Text" >
-                    <div><input type="text" name="search_box" id="search_criteria"></div>
-                    <input class="btn" type="button" value="Search" onclick="searchBtnClicked()">
+                    <!-- <input class="btn" type="button" value="Tags"> -->
+                    <!-- <input class="btn" type="button" value="Text" > -->
+                    <div class='search_types'>
+                        <div class='search_type active' onclick="criteriaClicked(this)">Text</div>
+                        <div class='search_type' onclick="criteriaClicked(this)">Tags</div>
+                    </div>
+                    <div class='context_search'>
+                        <!-- SEARCH FOR TEXT -->
+                        <input type="text" name="search_box" id="search_criteria">
+                        <input class="btn" type="button" value="Search" onclick="searchBtnClicked()">
+                        
+                        <!-- SEARCH FOR TAGS -->
+                        <!-- <div class='tag_collection'>
+                            <div class='tag' onclick="tagClicked(this)">Cheese</div>
+                            <div class='tag' onclick="tagClicked(this)">Original Recipe</div>
+                            <div class='tag' onclick="tagClicked(this)">Quick</div>
+                            <div class='tag' onclick="tagClicked(this)">10 People</div>
+                            <div class='tag' onclick="tagClicked(this)">Dinner</div>
+                            <div class='tag' onclick="tagClicked(this)">Breakfast</div>
+                            <div class='tag' onclick="tagClicked(this)">Brunch</div>
+                        </div> -->
+                    </div>
                 </form>
             </div>
         </div>

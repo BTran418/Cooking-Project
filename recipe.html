@@ -25,16 +25,16 @@
             <a href="index.html">Home</a>
             <a href="articles.html">Recipes</a>
             <a href="search.html">Search</a>
-            <div class="dropdown">
+            <!-- <div class="dropdown">
                 <button class="dropbtn">Tags</button>
                 <div class="dropdown-content">
                     <a href="search.html">Gluten Free</a>
                     <a href="search.html">Seafood</a>
                     <a href="search.html">Chicken</a>
                 </div>
-            </div>
-            <a id="login" href="#login">Login</a>
-            <a id="signup" href="#SignUp">Sign Up</a>
+            </div> -->
+            <a id="login" onclick='loginBtnClicked()'>Login</a>
+            <!-- <a id="signup" href="#SignUp">Sign Up</a> -->
         </div>
         <!-- Container for body -->
         <div class="spacer"></div>
@@ -97,6 +97,17 @@
     <div class="substitutes disabled" data-current-id="-1">
         <div class="substitutes_title">substitutes</div>
         <!-- <div class="substitute_item">1 Mango</div> -->
+    </div>
+    <div class="login_part disabled">
+        <div class="blackness"></div>
+        <div class="login_window">
+            <h1>Login</h1>
+            <div class="email_login login_t">Email: <input type="text"></div>
+            <div class="password_login login_t">Password: <input type="text"></div>
+            <button onclick="acceptLoginClicked()">Login</button>
+            <button onclick="cancelLoginClicked()">Cancel</button>
+
+        </div>
     </div>
 </body>
 

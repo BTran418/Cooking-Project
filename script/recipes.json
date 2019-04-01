@@ -244,8 +244,8 @@
             "Bake for 12-15 minutes until fish is cooked but still tender"
         ],
         "media": {
-            "0": "glazed_salmon.jpg",
-            "1": "glazed_salmon.mp4"
+            "1": "glazed_salmon.jpg",
+            "0": "glazed_salmon.mp4"
         },
         "tags": [
             "veggies"
@@ -263,7 +263,10 @@
         "media": {
             "0": "roasted_potatoes.jpg",
             "1": "roasted_potatoes.mp4"
-        }
+        },
+        "tags": [
+            "veggies"
+        ]
     },
     {
         "title": "Rosemary Lamb Chops",
@@ -313,7 +316,7 @@
             "1": "mac_cheese.mp4"
         },
         "tags": [
-            "veggies"
+            "quick"
         ]
     },
     {
@@ -330,7 +333,8 @@
             "1": "risotto.mp4"
         },
         "tags": [
-            "veggies"
+            "veggies",
+            "10 People"
         ]
     },
     {
@@ -360,11 +364,12 @@
         "equipment": [],
         "bodies": [],
         "media": {
-            "0": "mash.jpg",
-            "1": "mash_potato.mp4"
+            "1": "mash.jpg",
+            "0": "mashed_potato.mp4"
         },
         "tags": [
-            "veggies"
+            "veggies",
+            "quick"
         ]
     }
 ]
