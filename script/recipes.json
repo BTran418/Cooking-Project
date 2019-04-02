@@ -21,11 +21,11 @@
             "2 tablespoons all-purpose flour",
             "2 cups milk",
             "1 clove garlic, lightly crushed",
-            "1 package (8 oz) crumbled feta cheese",
+            "1 package (8 ounce) crumbled feta cheese",
             "1/2 teaspoon salt",
             "Black pepper to taste",
             "1 pinch freshly greated nutmeg",
-            "1 package (12 oz) penne pasta",
+            "1 package (12 ounce) penne pasta",
             "Cooking spray"
         ],
         "substitutes": {
@@ -35,8 +35,7 @@
             ],
             "2": [
                 "Ground beef",
-                "1/2 pound beef",
-                "1/2 pound lamb"
+                "1/2 pound beef, 1/2 pound lamb"
             ],
             "21": [
                 "Ziti",
@@ -61,6 +60,7 @@
             "Heatproof bowl",
             "Baking dish"
         ],
+        "stepAmount": 10,
         "bodies": [
             "Set oven rack about 6 inches from the heat source and preheat the oven's broiler. Line a baking sheet with aluminum foil; place eggplant halves on top.",
             "Broil eggplant, checking fairly often and rotating the baking sheet as needed, until the skin blackens and starts to char in places, about 15 minutes. Cool until easily handled, about 5 minutes. Peel off skin and coarsely chop flesh.",
@@ -72,15 +72,7 @@
             "Bring a large pot of salted water to boil. Add pasta and cook, stirring occasionally, until tender yet firm to the bite, about 12 minutes. Drain.",
             "Divide pasta between the white sauce and the lamb sauce and mix to combine. Pour the pasta with lamb sauce into the prepared baking dish; spread the pasta with white sauce on top.",
             "Bake in the preheated oven until top is golden and pastitsio is bubbling, about 30 minutes. Let cool for 5 minutes before serving."
-        ],
-        "media": {
-            "0": "cook1.jpg",
-            "1": "pad_thai.mp4",
-            "2": "cook1.jpg",
-            "3": "cook2.jpg",
-            "4": "cook1.jpg",
-            "5": "cook2.jpg"
-        }
+        ]
     },
     {
         "title": "AnotherRecipeTitle",
@@ -90,9 +82,6 @@
             "ingredient2",
             "ingredient3"
         ],
-        "substitutes": {
-            "0":[]
-        },
         "skills": [
             "skill1",
             "skill2",
@@ -103,6 +92,34 @@
             "equipment2",
             "equipment3"
         ],
+        "stepAmount": 5,
+        "bodies": [
+            "This is the first part",
+            "This is the second part",
+            "This is the third part",
+            "This is the fourth part",
+            "This is the fifth part"
+        ]
+    },
+    {
+        "title": "AnotherRecipeTitle",
+        "author": "AnotherRecipeAuthor",
+        "ingredients": [
+            "ingredient1",
+            "ingredient2",
+            "ingredient3"
+        ],
+        "skills": [
+            "skill1",
+            "skill2",
+            "skill3"
+        ],
+        "equipment": [
+            "equipment1",
+            "equipment2",
+            "equipment3"
+        ],
+        "stepAmount": 5,
         "bodies": [
             "This is the first part",
             "This is the second part",
@@ -110,8 +127,16 @@
             "This is the fourth part",
             "This is the fifth part"
         ],
-        "media": {
-            "0": ""
+        "substitutes": {
+            "1": [
+                "A",
+                "B",
+                "C"
+            ],
+            "2": [
+                "D",
+                "F"
+            ]
         }
     }
 ]
