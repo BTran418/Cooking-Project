@@ -2,7 +2,7 @@
 let jsonObjects = null; //All recipe objects
 let targetIngredientId = null;
 let targetRecipeID = 0;
-
+let login = null;
 // window.addEvent('scroll', updateSubstitutePosition());
 window.onload = function () {
     //Get recipe JSON file
@@ -20,13 +20,6 @@ window.onload = function () {
     }
 }
 
-function searchByString(string) {
-
-}
-
-function searchByTags(tags) {
-
-}
 
 /**
  * Returns specific recipe object.
@@ -330,6 +323,10 @@ function disableSubsMenu() {
 
 function addComment(){
     //TODO: Check if there is login
+    if(login == null){
+        loginBtnClicked();
+        return;
+    }
     let userComment = document.getElementById("user_comment").value;
     
     let commentPack = document.createElement('div');
@@ -345,5 +342,20 @@ function addComment(){
     document.getElementsByClassName('all_comments')[0].append(commentPack);
 
     individualComment.innerText = userComment;
-    individualAuthor.innerText = 'USER_NAME'; //TODO: Get user name from login
+    individualAuthor.innerText = login; //TODO: Get user name from login
+}
+
+function cancelLoginClicked(){
+    document.getElementsByClassName("login_part")[0].classList.add('disabled');
+}
+
+function loginBtnClicked(){
+    document.getElementsByClassName("login_part")[0].classList.remove('disabled');
+}
+
+function acceptLoginClicked(){
+    login = document.querySelector('.email_login input').value;
+    document.getElementsByClassName("login_part")[0].classList.add('disabled');
+    document.querySelector('#login').innerText = '@'+login;
+    document.querySelector('#login').setAttribute('onclick','');
 }

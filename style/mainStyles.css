@@ -1,9 +1,3 @@
-#trendingVideos {
-    margin: auto;
-    background-color: #333;
-    color: snow;
-}
-
 #WeeklyRecipe {
     height: 20rem;
     width: 20rem;
@@ -14,57 +8,113 @@
     flex-direction: column;
     align-items: center;
     justify-items: center;
+    height: 28rem;
+    background-color: white;
+    color: #333
+}
+
+.container2{
+    padding-top: 5px;
+    text-align: center;
     color: white;
+    background-color: #333;
     height: 28rem;
 }
-/* 
-.video {
-    border: 1px solid black;
-} */
-.wrapper{
+
+/* Video Player*/
+.a_video {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    background-color: #333;
-    color: white; 
-    height: 24rem;
+    color: snow;
+    overflow: hidden;
+    margin: 5px;
+}
+
+.video_container {
+    display: flex;
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+}
+.video_container:hover .controls{
+    transform: translateY(0);
+}
+
+.video {
+    width: 100%;
 }
 
 #videos {
-    margin: 0;
     display: flex;
-    flex-direction: row;
-    text-align: center;
     justify-content: center;
+    flex-direction: row;
 }
-
-.recipe_title {
+.image_container{
+    overflow: hidden;
+    max-height: 100%;
+}
+.image_container img{
+    display: inline-block;
+}
+/* .v-container{
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+}
+.v-container img{
+ */
+/* } */
+/* 
+.controls {
     display: flex;
-    margin-bottom: -3rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2px;
+    transform: translateY(100%) translateY(-5px);
+    transition: all 0.3s;
 }
 
-.recipe {
-    display: flex;
-    flex-direction: column;
-    margin: 1rem;
-    border: .5px solid black;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    height: 15.5rem;
+.buttons button {
+    background: 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
 }
 
-#trending {
-    padding-left: 13rem;
+.buttons button:before {
+    content: '\f144';
+    font-family: 'Font Awesome 5 Free';
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    font-size: 18px;
+    color: white; 
+} 
+
+.buttons button.play:before {
+    content:'\f144';
 }
 
-/* .recipe:before {
-    position:absolute;
-    font-family: FontAwesome;
-    font-size: 100px;
-    color: black;
-    opacity: .8;
-    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+chagne to pause button
+.button button.pause:before {
+    content:'\f28b';
 }
 
-.recipe:hover:before {
-    color: red;
-  } */
+.progress_bar {
+    height: 7px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+}
+
+.red_bar {
+    height: 7px;
+    background-color: red;
+} 
+
+ */

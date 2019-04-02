@@ -7,6 +7,10 @@
     <link rel="icon" href="/knifefork.ico">
     <script src="script/script.js"></script>
     <link rel="stylesheet" type="text/css" href="style/recipe.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recipe</title>
 </head>
 
 <body onclick="disableSubsMenu()">
@@ -18,20 +22,19 @@
             <header>
                 <h1>Cooking Instructor</h1>
             </header>
-            <a href="#home">Home</a>
-            <a href="#articles">Articles</a>
-            <a href="#videos">Videos</a>
-            <a href="#news">Search</a>
-            <div class="dropdown">
+            <a href="index.html">Home</a>
+            <a href="articles.html">Recipes</a>
+            <a href="search.html">Search</a>
+            <!-- <div class="dropdown">
                 <button class="dropbtn">Tags</button>
                 <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <a href="search.html">Gluten Free</a>
+                    <a href="search.html">Seafood</a>
+                    <a href="search.html">Chicken</a>
                 </div>
-            </div>
-            <a id="login" href="#login">Login</a>
-            <a id="signup" href="#SignUp">Sign Up</a>
+            </div> -->
+            <a id="login" onclick='loginBtnClicked()'>Login</a>
+            <!-- <a id="signup" href="#SignUp">Sign Up</a> -->
         </div>
         <!-- Container for body -->
         <div class="spacer"></div>
@@ -76,6 +79,12 @@
             <div class="discussion_title">
                 <h1>Comments</h1>
             </div>
+            <div id="comments">
+                <textarea id="user_comment" cols="30" rows="10"></textarea>
+                <div>
+                    <button onclick="addComment()">Add comment!</button>
+                </div>
+            </div>
             <div class="all_comments">
                 <!-- <div class="comment_pack">
                     <div class="individual_author">Fools Name</div>
@@ -83,17 +92,22 @@
                         comment on this recipe. I'm a comment on this recipe.</div>
                 </div> -->
             </div>
-            <div id="comments">
-                <textarea id="user_comment" cols="30" rows="10"></textarea>
-                <div>
-                    <button onclick="addComment()">Add comment!</button>
-                </div>
-            </div>
         </div>
     </div>
     <div class="substitutes disabled" data-current-id="-1">
         <div class="substitutes_title">substitutes</div>
         <!-- <div class="substitute_item">1 Mango</div> -->
+    </div>
+    <div class="login_part disabled">
+        <div class="blackness"></div>
+        <div class="login_window">
+            <h1>Login</h1>
+            <div class="email_login login_t">Email: <input type="text"></div>
+            <div class="password_login login_t">Password: <input type="text"></div>
+            <button onclick="acceptLoginClicked()">Login</button>
+            <button onclick="cancelLoginClicked()">Cancel</button>
+
+        </div>
     </div>
 </body>
 

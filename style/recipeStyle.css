@@ -96,7 +96,6 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 #comments{
@@ -107,6 +106,12 @@ h1 {
     width: 80%;
     margin: 15px;
     color: black;
+}
+
+.all_comments {
+    width: 80%;
+    margin: 16px;
+    border: 0.1rem solid black;
 }
 
 #top {

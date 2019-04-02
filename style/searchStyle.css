@@ -3,7 +3,101 @@
 }
 
 .container {
-    height: 40rem;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    height: 30rem;
     background-color: #333;
 }
 
+#results_div {
+    display: flex;
+    align-self: center;
+    height: 16rem;
+    border: .1px solid black;
+    width: 80%;
+}
+
+.results_container {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    min-height: 30rem;
+    background-color: #333;
+}
+#result{
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: snow;
+    min-height: 16rem;
+}
+.individual_result{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    min-width: 80%;
+}
+.media{
+    margin: 1rem;
+}
+.description{
+    margin: 1rem;
+}
+.recipe_title{
+    font-size: 1.5rem;
+    min-width: 45rem;
+}
+.recipe_text{
+    max-width: 30rem;
+}
+
+
+
+
+
+#search_btns{
+    display:flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.search_types{
+    display:flex;
+
+}
+.search_type{
+    font-size: 4rem;
+    padding: 3rem;
+
+    text-align: center;
+}
+.search_type:hover{
+    background-color: white;
+    color:black;
+}
+.context_search{
+    display: flex;
+    justify-content: center;
+    width:100%;
+}
+.active{
+    background-color:rgb(255, 70, 70);
+    color: snow;
+}
+.active:hover{
+    background-color:rgb(255, 70, 70);
+    color: snow;
+}
+
+.tag_collection{
+    background-color: snow;
+    height: 8rem;
+    min-width: 10rem; 
+    overflow-y: scroll;
+}
+
+.disabled{
+    display:none;
+}

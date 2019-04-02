@@ -82,6 +82,7 @@
             "ingredient2",
             "ingredient3"
         ],
+<<<<<<< HEAD
         "skills": [
             "skill1",
             "skill2",
@@ -99,34 +100,183 @@
             "This is the third part",
             "This is the fourth part",
             "This is the fifth part"
+=======
+        "media": {
+            "0": "cook1.jpg",
+            "1": "eggplant.mp4",
+            "2": "cook1.jpg",
+            "3": "cook2.jpg",
+            "4": "cook1.jpg",
+            "5": "cook2.jpg"
+        },
+        "tags": [
+            "veggies"
+>>>>>>> dd21929bb76d8d1928a99d43cd1f58313dc0c572
         ]
     },
     {
-        "title": "AnotherRecipeTitle",
-        "author": "AnotherRecipeAuthor",
+        "title": "Teriyaki Chicken",
+        "author": "Alvin Zhou - Tasy",
+        "description": "",
         "ingredients": [
-            "ingredient1",
-            "ingredient2",
-            "ingredient3"
+            "2 lb chicken thighs (910g)",
+            "1 cup soy sauce (240ml)",
+            "1/2 cup brown sugar (110g)"
         ],
+        "substitutes": {},
         "skills": [
-            "skill1",
-            "skill2",
-            "skill3"
+            "Slicing chicken"
         ],
         "equipment": [
-            "equipment1",
-            "equipment2",
-            "equipment3"
+            "Knife",
+            "Chopping board",
+            "Skillet",
+            "Spatula"
+        ],
+        "bodies": [
+            "Slice the chicken thighs into thin chunks",
+            "Sear the chicken thighs evenly in a pan, then flip",
+            "Add the soy sauce and brown sugar, stirring and brining to a boil",
+            "Stir until the sauce has reduced and evenly glazes the chicken",
+            "Serve with rice if desired"
+        ],
+        "media": {
+            "0": "honey_chicken.jpg",
+            "1": "terriyaki_chicken.mp4",
+            "2": "sliced_chicken.jpg",
+            "3": "marinate_chicken.jpg",
+            "4": "cook_chicken.jpg",
+            "5": "flip_chicken.jpg",
+            "6": "browned_chicken.jpg",
+            "7": "toss_chicken.jpg",
+            "8": "plate_chicken.jpg"
+        },
+        "tags": [
+            "veggies"
+        ]
+    },
+    {
+        "title": "Stuffed Eggplant",
+        "author": "FrancesC - AllRecipes employee",
+        "description": "Cook's Notes: To make this recipe ahead of time, you can assemble the casserole and refrigerate, covered with plastic wrap, or freeze. To reheat from the refrigerator, cover baking dish with aluminum foil and bake for about 1 hour, removing the foil for the last 20 minutes. If you bake it directly from the freezer, bake for 1 hour covered, and about 30 minutes uncovered.",
+        "ingredients": [
+            "1 large eggplant",
+            "1 tbsp olive oil",
+            "1 pound tofu",
+            "1 clove garlic, minced",
+            "1 1/2 cups of chopped onion",
+            "1 1/2 teaspoons salt",
+            "1 teaspoon ground cumin",
+            "1 teaspoon dried oregano",
+            "1/4 teaspoon black pepper",
+            "1/4 teaspoon ground cinammon",
+            "1 can (14 ounce) crushed tomatoes",
+            "1 tablespoon fresh mint, chopped",
+            "2 eggs",
+            "2 tablespoons unsalted butter",
+            "2 tablespoons all-purpose flour",
+            "2 cups milk",
+            "1 clove garlic, lightly crushed",
+            "1 package (8 oz) crumbled feta cheese",
+            "1/2 teaspoon salt",
+            "Black pepper to taste",
+            "1 pinch freshly greated nutmeg",
+            "1 package (12 oz) penne pasta",
+            "Cooking spray"
+        ],
+<<<<<<< HEAD
+=======
+        "substitutes": {
+            "1": [
+                "Canola oil",
+                "Vegetable oil"
+            ],
+            "2": [
+                "Ground beef",
+                "1/2 pound beef",
+                "1/2 pound lamb"
+            ],
+            "21": [
+                "Ziti",
+                "Rigatoni",
+                "Any other tubular pasta of your choice"
+            ]
+        },
+>>>>>>> dd21929bb76d8d1928a99d43cd1f58313dc0c572
+        "skills": [
+            "Chopping vegetables",
+            "Mincing garlic",
+            "Boiling water",
+            "Chopping herbs",
+            "Oven broiling"
+        ],
+        "equipment": [
+            "Knife",
+            "Chopping board",
+            "Oven",
+            "Stove top, pot and strainer",
+            "Skillet",
+            "Whisk",
+            "Heatproof bowl",
+            "Baking dish"
+        ],
+        "bodies": [
+            "Set oven rack about 6 inches from the heat source and preheat the oven's broiler. Line a baking sheet with aluminum foil; place eggplant halves on top.",
+            "Broil eggplant, checking fairly often and rotating the baking sheet as needed, until the skin blackens and starts to char in places, about 15 minutes. Cool until easily handled, about 5 minutes. Peel off skin and coarsely chop flesh.",
+            "Heat olive oil in a large skillet over medium heat. Add onions; cook and stir over medium heat until onion is translucent, about 5 minutes. Add lamb and cook, breaking it up into small pieces, until no pink remains, about 5 minutes. Drain grease from the skillet.",
+            "Stir minced garlic, salt, cumin, oregano, pepper, and cinnamon into the skillet; cook for 1 minute. Stir in chopped eggplant, diced tomatoes, and crushed tomatoes. Bring sauce to a simmer and cook until thickened, about 20 minutes. Remove from heat and stir in chopped mint.",
+            "Melt butter in a saucepan over medium heat. Stir in flour and cook, stirring constantly, for 2 minutes. Pour in milk and whisk until smooth. Add crushed garlic clove, increase heat to high, and bring milk to a boil. Reduce heat and simmer, stirring frequently, until slightly thickened, about 5 minutes more. Remove from heat; discard garlic clove",
+            "Whisk eggs in a large heatproof bowl. Pour hot milk mixture in a steady stream into beaten eggs, whisking constantly. Stir in feta cheese, salt, pepper, and nutmeg.",
+            "Preheat oven to 425 degrees F (220 degrees C). Spray a 9x13-inch baking dish with cooking spray.",
+            "Bring a large pot of salted water to boil. Add pasta and cook, stirring occasionally, until tender yet firm to the bite, about 12 minutes. Drain.",
+            "Divide pasta between the white sauce and the lamb sauce and mix to combine. Pour the pasta with lamb sauce into the prepared baking dish; spread the pasta with white sauce on top.",
+            "Bake in the preheated oven until top is golden and pastitsio is bubbling, about 30 minutes. Let cool for 5 minutes before serving."
+        ],
+        "media": {
+            "0": "stuffed_eggplant.jpg",
+            "1": "stuffed_eggplant.mp4",
+            "2": "cook1.jpg",
+            "3": "cook2.jpg",
+            "4": "cook1.jpg",
+            "5": "cook2.jpg"
+        },
+        "tags": [
+            "veggies"
+        ]
+    },
+    {
+        "title": "Chilli Glazed Salmon",
+        "author": "Alvin Zhou - Tasty",
+        "description": "Cooking great a dish is very easy if you follow this recipe!",
+        "ingredients": [
+            "3 Salmon fillets - 4 oz",
+            "1/2 cup chilli sauce - 130g",
+            "1/4 fresh chopped scallions"
+        ],
+        "substitutes": {
+            "1": [
+                "Tuna"
+            ]
+        },
+        "skills": [
+            "Chopping vegetables",
+            "Using an oven"
+        ],
+        "equipment": [
+            "Oven",
+            "Knife",
+            "Mixing bowl/dish",
+            "Oven tray"
         ],
         "stepAmount": 5,
         "bodies": [
-            "This is the first part",
-            "This is the second part",
-            "This is the third part",
-            "This is the fourth part",
-            "This is the fifth part"
+            "Preheat the oven to 400F (200C)",
+            "Chop the scallions",
+            "Mix the scallions, fish and chilli sauce in a bowl",
+            "Place the fish on a baking tray lined with parchment paper, spoon any leftover sauce on top",
+            "Bake for 12-15 minutes until fish is cooked but still tender"
         ],
+<<<<<<< HEAD
         "substitutes": {
             "1": [
                 "A",
@@ -138,5 +288,135 @@
                 "F"
             ]
         }
+=======
+        "media": {
+            "1": "glazed_salmon.jpg",
+            "0": "glazed_salmon.mp4"
+        },
+        "tags": [
+            "veggies"
+        ]
+    },
+    {
+        "title": "Roasted Potato",
+        "author": "",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "ingredients": [],
+        "substitutes": {},
+        "skills": [],
+        "equipment": [],
+        "bodies": [],
+        "media": {
+            "0": "roasted_potatoes.jpg",
+            "1": "roasted_potatoes.mp4"
+        },
+        "tags": [
+            "veggies"
+        ]
+    },
+    {
+        "title": "Rosemary Lamb Chops",
+        "author": "",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "ingredients": [],
+        "substitutes": {},
+        "skills": [],
+        "equipment": [],
+        "bodies": [],
+        "media": {
+            "0": "rosemary_lamb.jpg",
+            "1": "lamb_chops.mp4"
+        },
+        "tags": [
+            "veggies"
+        ]
+    },
+    {
+        "title": "Tonkatsu Ramen",
+        "author": "",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "ingredients": [],
+        "substitutes": {},
+        "skills": [],
+        "equipment": [],
+        "bodies": [],
+        "media": {
+            "0": "tonkatsu_ramen.jpg",
+            "1": "ramen.mp4"
+        },
+        "tags": [
+            "veggies"
+        ]
+    },
+    {
+        "title": "Mac and Cheese",
+        "author": "",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "ingredients": [],
+        "substitutes": {},
+        "skills": [],
+        "equipment": [],
+        "bodies": [],
+        "media": {
+            "0": "mac_cheese.jpg",
+            "1": "mac_cheese.mp4"
+        },
+        "tags": [
+            "quick"
+        ]
+    },
+    {
+        "title": "Rissoto",
+        "author": "",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "ingredients": [],
+        "substitutes": {},
+        "skills": [],
+        "equipment": [],
+        "bodies": [],
+        "media": {
+            "0": "risotto.jpg",
+            "1": "risotto.mp4"
+        },
+        "tags": [
+            "veggies",
+            "10 People"
+        ]
+    },
+    {
+        "title": "Spring Rolls",
+        "author": "",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "ingredients": [],
+        "substitutes": {},
+        "skills": [],
+        "equipment": [],
+        "bodies": [],
+        "media": {
+            "0": "spring_roll.jpg",
+            "1": "springroll.mp4"
+        },
+        "tags": [
+            "veggies"
+        ]
+    },
+    {
+        "title": "Mash Potato",
+        "author": "",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "ingredients": [],
+        "substitutes": {},
+        "skills": [],
+        "equipment": [],
+        "bodies": [],
+        "media": {
+            "1": "mash.jpg",
+            "0": "mashed_potato.mp4"
+        },
+        "tags": [
+            "veggies",
+            "quick"
+        ]
+>>>>>>> dd21929bb76d8d1928a99d43cd1f58313dc0c572
     }
 ]
