@@ -1,0 +1,30 @@
+High:
+- What happens when you have hundreds of tags?
+- Think about styling the comments as well (user name styled differently than the text in the comment)
+- Text like “Search by” is tough to read (dark on dark)
+- Your search results are “Below the fold” – there’s no indication that any searching was done. Try and make it more clear that there are results (or not) with the search.
+- Make it clear visually which ingredients have substitutes.
+- Comment box way too wide
+- Show a message when no results are found when searching. Let the user know what is going on.
+- Show the changes made on the ingredients recipe list.
+
+Medium:
+- Restyle the stuff that has hyperlink underlines. (Ex: Recipe of the week.)
+- Put some padding into the search bar (it’s crammed against the “Text” and “Tags” buttons). Also – think about placement of the tags box and search button.
+- Think about what happens when you have hundreds of recipes in here.
+- Maybe show/hide the ingredients/skills/equipment? I probably don’t need it once I’m ready to go.
+- Tags could be implemented into part of the search…comes up as typed
+- Make it more obvious that “Text ” and “Tags” are clickable
+- Your heading says “Videos” when I think it should be “Recipes”
+
+Low:
+- Show some actual comments in the comments section.
+- The video gets super big for me. Ends up covering the instructions. [note: Videos breaks on Chrome. Will fix if there is time.]
+- Make the text in the instructions more structured – try and make it easier to step through what each instruction is asking for. Ex: Bullet points at minimum.
+- Have only the actual ingredients in the list scroll (and not the header.. it gets lost and then I get lost)
+- Maintain consistency throughout page…. comment page looks out of place, colours are too different
+- Move Add comment button to underneath the text box
+- Make use of icons to reduce the amount of text.
+- Button to show a random recipe.
+- “Tags” appears in the menu – I feel like this should probably be “categories” and should show up differently somehow. (A submenu maybe?)
+- Nutrition values for the recipes.

@@ -1,5 +1,6 @@
 .btn {
     width: 5rem;
+    height: 2rem;
 }
 
 .container {
@@ -53,10 +54,6 @@
     max-width: 30rem;
 }
 
-
-
-
-
 #search_btns{
     display:flex;
     width: 100%;
@@ -100,4 +97,12 @@
 
 .disabled{
     display:none;
+}
+
+.tag_search{
+    display:flex;
+    flex-flow: column nowrap;
+    
+    align-items: center;
+    padding: 1rem;
 }

@@ -157,7 +157,8 @@ function criteriaClicked(element) {
     //Change elements
     let textSearch = '<input type="text" name="search_box" id="search_criteria">' +
         '<input class="btn" type="button" value="Search" onclick="searchBtnClicked()">';
-    let tagSearch = '<div class=\'tag_collection\'>' +
+    let tagSearch = '<div class=\'tag_search\'>' + 
+        '<div class=\'tag_collection\'>' +
         '<div class=\'tag\' onclick="tagClicked(this)">Cheese</div>' +
         '<div class=\'tag\' onclick="tagClicked(this)">Original Recipe</div>' +
         '<div class=\'tag\' onclick="tagClicked(this)">Quick</div>' +
@@ -165,8 +166,10 @@ function criteriaClicked(element) {
         '<div class=\'tag\' onclick="tagClicked(this)">Dinner</div>' +
         '<div class=\'tag\' onclick="tagClicked(this)">Breakfast</div>' +
         '<div class=\'tag\' onclick="tagClicked(this)">Brunch</div>' +
-        '</div>' +
-        '<input class="btn" type="button" value="Search" onclick="searchBtnClicked()">';
+        '</div>' + //TAG_COLLECTION CLOSE
+        '<input id="tag_filter" type="text" placeholder="Filter Tags"></input>' +
+        '</div>'; //TAG_SEARCH CLOSE
+        // '<input class="btn" type="button" value="Search" onclick="searchBtnClicked()">';
 
 
     if (element.innerText.includes('Text')) {
