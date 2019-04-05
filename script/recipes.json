@@ -82,25 +82,6 @@
             "ingredient2",
             "ingredient3"
         ],
-<<<<<<< HEAD
-        "skills": [
-            "skill1",
-            "skill2",
-            "skill3"
-        ],
-        "equipment": [
-            "equipment1",
-            "equipment2",
-            "equipment3"
-        ],
-        "stepAmount": 5,
-        "bodies": [
-            "This is the first part",
-            "This is the second part",
-            "This is the third part",
-            "This is the fourth part",
-            "This is the fifth part"
-=======
         "media": {
             "0": "cook1.jpg",
             "1": "eggplant.mp4",
@@ -111,7 +92,6 @@
         },
         "tags": [
             "veggies"
->>>>>>> dd21929bb76d8d1928a99d43cd1f58313dc0c572
         ]
     },
     {
@@ -184,8 +164,6 @@
             "1 package (12 oz) penne pasta",
             "Cooking spray"
         ],
-<<<<<<< HEAD
-=======
         "substitutes": {
             "1": [
                 "Canola oil",
@@ -202,7 +180,6 @@
                 "Any other tubular pasta of your choice"
             ]
         },
->>>>>>> dd21929bb76d8d1928a99d43cd1f58313dc0c572
         "skills": [
             "Chopping vegetables",
             "Mincing garlic",
@@ -276,19 +253,6 @@
             "Place the fish on a baking tray lined with parchment paper, spoon any leftover sauce on top",
             "Bake for 12-15 minutes until fish is cooked but still tender"
         ],
-<<<<<<< HEAD
-        "substitutes": {
-            "1": [
-                "A",
-                "B",
-                "C"
-            ],
-            "2": [
-                "D",
-                "F"
-            ]
-        }
-=======
         "media": {
             "1": "glazed_salmon.jpg",
             "0": "glazed_salmon.mp4"
@@ -417,6 +381,5 @@
             "veggies",
             "quick"
         ]
->>>>>>> dd21929bb76d8d1928a99d43cd1f58313dc0c572
     }
 ]
