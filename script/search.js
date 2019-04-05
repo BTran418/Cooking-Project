@@ -14,7 +14,7 @@ window.onload = function () {
         jsonObjects = request.response; //Create recipe objects from a JSON file.
         // console.log(jsonObjects);
         // searchByText('oven');
-        console.log(jsonObjects[4].tags);
+        // console.log(jsonObjects[4].tags);
 
     }
 }
@@ -25,6 +25,8 @@ function searchByText(search) {
     let searchResults = [];
     search = search.toLowerCase();
 
+    console.log('Yo searching by text...');
+    // console.log(jsonObjects[0].description);
     for (let i = 0; i < jsonObjects.length; i++) {
         if (jsonObjects[i]['description'].toLowerCase().includes(search) || jsonObjects[i]['title'].toLowerCase().includes(search)) {
             searchResults.push(jsonObjects[i]);
@@ -57,6 +59,8 @@ function populateResults(recipe, id) {
     let individualResult = document.createElement('div');
     let media = document.createElement('div');
     let mediaSrc = null;
+
+    console.log(recipe.media);
 
     if (recipe.media[0].includes(".mp4")) {
         mediaSrc = document.createElement('video');
@@ -99,7 +103,7 @@ function populateResults(recipe, id) {
 }
 
 function searchBtnClicked() {
-
+    // console.log("asdasdsa");
     //Remove previous results
     if (document.getElementById('result').children.length != 0) {
         while(document.getElementById('result').children.length != 0){
@@ -118,7 +122,7 @@ function searchBtnClicked() {
         if (search == '' || search == null) {
             return;
         }
-        console.log(searchByText(search));
+        // console.log(searchByText(search));
         
         // for (let i = 0; i < results.length; i++) {
         //     populateResults(results[i]);
@@ -131,7 +135,7 @@ function searchBtnClicked() {
         for(let i = 0; i < activeTagsDiv.length; i++){
             temp.push(activeTagsDiv[i].innerText);
         }
-        console.log(searchByTag(temp));
+        // console.log(searchByTag(temp));
     }
     for (let i = 0; i < results.length; i++) {
         populateResults(results[i], ids[i]);
@@ -155,8 +159,8 @@ function criteriaClicked(element) {
     }
 
     //Change elements
-    let textSearch = '<input type="text" name="search_box" id="search_criteria">' +
-        '<input class="btn" type="button" value="Search" onclick="searchBtnClicked()">';
+    let textSearch = '<input type="text" name="search_box" id="search_criteria" placeholder="Search for">';
+        // '<input class="btn" type="button" value="Search" onclick="searchBtnClicked()">';
     let tagSearch = '<div class=\'tag_search\'>' + 
         '<div class=\'tag_collection\'>' +
         '<div class=\'tag\' onclick="tagClicked(this)">Cheese</div>' +
