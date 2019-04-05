@@ -122,6 +122,7 @@ function searchBtnClicked() {
         if (search == '' || search == null) {
             return;
         }
+        searchByText(search);
         // console.log(searchByText(search));
         
         // for (let i = 0; i < results.length; i++) {
