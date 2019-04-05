@@ -126,3 +126,11 @@
     align-items: center;
     padding: 1rem;
 }
+
+#search_criteria{
+    width: 12rem;
+    height: 4rem;
+    font-size:2rem;
+
+    margin: 1rem;
+}

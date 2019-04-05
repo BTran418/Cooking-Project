@@ -76,6 +76,7 @@
     },
     {
         "title": "AnotherRecipeTitle",
+        "description":"Some random description here.",
         "author": "AnotherRecipeAuthor",
         "ingredients": [
             "ingredient1",
