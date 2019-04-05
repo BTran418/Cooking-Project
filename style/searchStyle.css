@@ -11,12 +11,24 @@
     background-color: #333;
 }
 
+#search_title {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+
+#results_title {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+
 #results_div {
     display: flex;
     align-self: center;
     height: 16rem;
     border: .1px solid black;
-    width: 80%;
+    width: 100%;
 }
 
 .results_container {
@@ -25,7 +37,14 @@
     flex-direction: column;
     min-height: 30rem;
     background-color: #333;
+    width: 100%;
 }
+
+#tags_div{
+    display: flex;
+    justify-content: center;
+}
+
 #result{
     display:flex;
     flex-flow: column nowrap;
@@ -33,6 +52,7 @@
     /* justify-content: center; */
     background-color: snow;
     min-height: 16rem;
+    width: 80%;
 }
 .individual_result{
     display: flex;
