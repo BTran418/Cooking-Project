@@ -136,6 +136,7 @@ function searchBtnClicked() {
         for(let i = 0; i < activeTagsDiv.length; i++){
             temp.push(activeTagsDiv[i].innerText);
         }
+        searchByTag(temp);
         // console.log(searchByTag(temp));
     }
     for (let i = 0; i < results.length; i++) {
@@ -191,6 +192,7 @@ function tagClicked(element) {
     }
     else {
         element.classList.add('active');
+        searchBtnClicked();
     }
 }
 
