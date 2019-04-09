@@ -16,7 +16,19 @@
     align-self: center;
     height: 16rem;
     border: .1px solid black;
-    width: 80%;
+    width: 100%;
+}
+
+#search_title {
+    text-align: center;
+    font-size: 2rem;
+    color: snow;
+}
+
+#results_title {
+    text-align: center;
+    font-size: 2rem;
+    color: snow; 
 }
 
 .results_container {
@@ -33,12 +45,19 @@
     /* justify-content: center; */
     background-color: snow;
     min-height: 16rem;
+    width: 80%;
+}
+
+#tags_div{
+    display: flex;
+    justify-content: center;
 }
 .individual_result{
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-items: center;
     min-width: 80%;
+    align-items: center;
 }
 .media{
     margin: 1rem;
