@@ -28,6 +28,9 @@
             "1 package (12 ounce) penne pasta",
             "Cooking spray"
         ],
+        "media":{
+            "0": "cook1.jpg"
+        },
         "substitutes": {
             "1": [
                 "Canola oil",
