@@ -172,7 +172,7 @@ function criteriaClicked(element) {
         '<div class=\'tag\' onclick="tagClicked(this)">Breakfast</div>' +
         '<div class=\'tag\' onclick="tagClicked(this)">Brunch</div>' +
         '</div>' + //TAG_COLLECTION CLOSE
-        '<input id="tag_filter" type="text" placeholder="Filter Tags"></input>' +
+        '<input id="tag_filter" type="text" placeholder="Filter Tags" oninput="tagManager()"></input>' +
         '</div>'; //TAG_SEARCH CLOSE
         // '<input class="btn" type="button" value="Search" onclick="searchBtnClicked()">';
 
@@ -191,5 +191,18 @@ function tagClicked(element) {
     }
     else {
         element.classList.add('active');
+    }
+}
+
+function tagManager(){
+    let allTags = document.querySelector('.tag_collection').children;
+    let filter = new RegExp(document.querySelector('#tag_filter').value.toLowerCase(), "gi");
+    for(let i = 0; i < allTags.length; i++){
+        if(allTags[i].innerText.search(filter) == -1){
+            allTags[i].classList.add('disabled');
+        }
+        else{
+            allTags[i].classList.remove('disabled');
+        }
     }
 }
