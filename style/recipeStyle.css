@@ -103,15 +103,18 @@ h1 {
     align-self: center;
     border: 0.1rem solid black;
     height: 40%;
-    width: 80%;
+    width: 50%;
     margin: 15px;
     color: black;
 }
 
 .all_comments {
-    width: 80%;
-    margin: 16px;
+    width: 50%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     border: 0.1rem solid black;
+    background-color: #333;
+    font: bolder;
 }
 
 #top {
@@ -178,16 +181,16 @@ h1 {
     display:none;
 }
 .all_comments{
-    min-width: 60%;
-    max-width: 60%;
+    min-width: 50%;
+    max-width: 50%;
     min-height: 5rem;
     align-self: center;
 }
 .comment_pack{
-
-   
     /* align-self: center; */
     border: solid black 0.1rem;
+    margin: 2rem;
+    background-color: snow;
 }
 .individual_comment{
     margin: 1rem;
