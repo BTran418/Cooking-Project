@@ -243,3 +243,7 @@ h1 {
 .noshadow{
     box-shadow: none;
 }
+
+textarea{
+    font-size: 1.4rem;
+}
