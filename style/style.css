@@ -140,15 +140,35 @@ display: block;
     align-self: center;
 
     background-color: snow;
+    box-shadow: 0 0 1rem black;
+    border-radius: 2rem;
 }
 
 .login_t{
-    min-width: 10rem;
+    display: flex;
+    /* min-width: 15rem; */
 }
-
+.login_t div{
+    min-width: 5rem;
+}
 .disabled{
     display:none;
 }
 .container, .navbar, .container2, .container3{
     box-shadow: 0 0 1rem black;
+}
+.login_info{
+    margin: 2rem;
+    padding: 2rem;
+    color: snow;
+    background-color: #333;
+}
+
+.login_window button{
+    width: 5rem;
+    height: 2rem;
+}
+
+.noshadow{
+    box-shadow: none;
 }

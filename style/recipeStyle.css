@@ -232,3 +232,6 @@ h1 {
     color: #333;
     border: 0.1rem solid #333;
 }
+.noshadow{
+    box-shadow: none;
+}
