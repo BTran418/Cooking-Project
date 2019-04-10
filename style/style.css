@@ -10,6 +10,14 @@ width: 100%;
 background-attachment: fixed;
 }
 
+#CI_Title {
+    font-size: 1.5rem;
+}
+
+h1{
+    font-family: 'Merienda', cursive;
+}
+
 #black_alpha {
     background-color: black; 
     opacity: 0.6;
@@ -91,7 +99,7 @@ text-align: left;
 }
 
 .spacer {
-    height: 7rem;
+    height: 3rem;
 }
 
 .dropdown-content a:hover {

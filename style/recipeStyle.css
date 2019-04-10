@@ -78,7 +78,6 @@ h1 {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-between;
-
     width: 40%;
     min-height: 30%;
     background-color: rgba(0, 0, 0, 0.514);
@@ -89,7 +88,6 @@ h1 {
     margin-bottom: 2rem;
     min-height: 10rem;
     max-width: 80%;
-
     font-size: 1.1rem;
 }
 .body_nav{
@@ -101,10 +99,9 @@ h1 {
 #comments{
     display: flex;
     align-self: center;
-    border: 0.1rem solid black;
+    border: 0.1rem solid red;
     height: 40%;
     width: 50%;
-    margin: 15px;
     color: black;
 }
 
