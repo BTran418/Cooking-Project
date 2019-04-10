@@ -98,8 +98,9 @@ h1 {
 
 #comments{
     display: flex;
+    flex-flow: column nowrap;
     align-self: center;
-    border: 0.1rem solid red;
+    /* border: 0.1rem solid red; */
     height: 40%;
     width: 50%;
     color: black;
@@ -188,6 +189,13 @@ h1 {
     border: solid black 0.1rem;
     margin: 2rem;
     background-color: snow;
+    box-shadow: 0 0 1rem black;
+}
+.individual_author{
+    color: black;
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    padding-top:0.5rem;
 }
 .individual_comment{
     margin: 1rem;

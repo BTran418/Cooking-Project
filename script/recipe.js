@@ -19,6 +19,7 @@ window.onload = function () {
         for(let i = 0; i < jsonObjects.length; i++){
             populateResults(jsonObjects[i], i);
         }
+
     }
 }
 

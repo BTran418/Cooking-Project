@@ -17,9 +17,13 @@ window.onload = function () {
         // console.log(site.indexOf("recipe-id="));
         // console.log(site.substring(site.indexOf("recipe-id=")).split('=')[1]);
         populateRecipeSite(targetRecipeID);
+        
+        if(targetRecipeID == 0){
+            customComment('Silva', 'This recipe is quite good. My whole family enjoyed it!');
+            customComment('TheLegend27', 'Conquered all my guests with this flavourful meal. 10/10 would cook again.');
+        }
     }
 }
-
 
 /**
  * Returns specific recipe object.
@@ -383,4 +387,24 @@ function expandBtnClicked() {
         document.querySelector('.container').setAttribute('style', '');
         document.querySelector('.expand_btn div').innerText = '/\\';
     }
+}
+
+function customComment(author, comment){
+    
+    let userComment = comment;
+
+    let commentPack = document.createElement('div');
+    commentPack.classList.add('comment_pack');
+    let individualAuthor = document.createElement('div');
+    individualAuthor.classList.add('individual_author');
+    let individualComment = document.createElement('div');
+    individualComment.classList.add('individual_comment');
+
+    commentPack.append(individualAuthor);
+    commentPack.append(individualComment);
+
+    document.getElementsByClassName('all_comments')[0].append(commentPack);
+
+    individualComment.innerText = userComment;
+    individualAuthor.innerText = author;
 }
