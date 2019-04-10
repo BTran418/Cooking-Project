@@ -62,8 +62,7 @@ function populateRecipeSite(id) {
         textDiv.classList.add("item_text");
         textDiv.innerText = recipeObj.ingredients[i];
         //Check for substitutes
-        console.log(recipeObj.substitutes["" + i]);
-        if(recipeObj.substitutes["" + i] != null){
+        if (recipeObj.substitutes["" + i] != null) {
             // itemDiv.classList.add('has_substitutes');
             textDiv.classList.add("add_arrow");
         }
@@ -329,14 +328,14 @@ function disableSubsMenu() {
 
 //#endregion
 
-function addComment(){
+function addComment() {
     //TODO: Check if there is login
-    if(login == null){
+    if (login == null) {
         loginBtnClicked();
         return;
     }
     let userComment = document.getElementById("user_comment").value;
-    
+
     let commentPack = document.createElement('div');
     commentPack.classList.add('comment_pack');
     let individualAuthor = document.createElement('div');
@@ -353,17 +352,35 @@ function addComment(){
     individualAuthor.innerText = login; //TODO: Get user name from login
 }
 
-function cancelLoginClicked(){
+function cancelLoginClicked() {
     document.getElementsByClassName("login_part")[0].classList.add('disabled');
 }
 
-function loginBtnClicked(){
+function loginBtnClicked() {
     document.getElementsByClassName("login_part")[0].classList.remove('disabled');
 }
 
-function acceptLoginClicked(){
+function acceptLoginClicked() {
     login = document.querySelector('.email_login input').value;
     document.getElementsByClassName("login_part")[0].classList.add('disabled');
-    document.querySelector('#login').innerText = '@'+login;
-    document.querySelector('#login').setAttribute('onclick','');
+    document.querySelector('#login').innerText = '@' + login;
+    document.querySelector('#login').setAttribute('onclick', '');
+}
+
+function expandBtnClicked() {
+    let allBoxes = document.querySelectorAll(".container_box");
+    if (document.querySelector('.container').getAttribute('style') == '' || document.querySelector('.container').getAttribute('style') == null) {
+        for (let i = 0; i < allBoxes.length; i++) {
+            allBoxes[i].setAttribute('style', 'display:none;');
+        }
+        document.querySelector('.container').setAttribute('style', 'height:15rem;');
+        document.querySelector('.expand_btn div').innerText = '\\/';
+    }
+    else {
+        for (let i = 0; i < allBoxes.length; i++) {
+            allBoxes[i].setAttribute('style', '');
+        }
+        document.querySelector('.container').setAttribute('style', '');
+        document.querySelector('.expand_btn div').innerText = '/\\';
+    }
 }
