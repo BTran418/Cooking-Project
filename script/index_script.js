@@ -73,7 +73,7 @@ function populateTrending(){
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
-  }
+}
 
 function findObjectInArray(array, object){
     for(let i = 0; i < array.length; i++){

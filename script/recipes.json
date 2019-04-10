@@ -82,8 +82,8 @@
         ]
     },
     {
-        "title": "AnotherRecipeTitle",
-        "description":"Some random description here.",
+        "title": "Rice",
+        "description":"Let's boil those grains like no tomorrow!",
         "author": "AnotherRecipeAuthor",
         "ingredients": [
             "ingredient1",

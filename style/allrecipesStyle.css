@@ -1,0 +1,44 @@
+#all_recipes{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.individual_result{
+    display: flex;
+    flex-flow: row nowrap;
+
+    align-items: center;
+    width: 60%;
+
+    margin: 2rem;
+    padding: 1rem;
+    color:#333;
+    background-color:snow;
+
+    box-shadow: 0px 0px 1rem black;
+}
+
+.individual_result:hover{
+    
+}
+
+.media{
+    border: 0.2rem solid black;
+    margin-right: 0.2rem;
+}
+.description{
+    display: flex;
+    flex-flow: column nowrap;
+
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.description a{
+    text-decoration: none;
+    font-size:1.5rem;
+    color: black;
+    padding-bottom: 0.5rem;
+}
