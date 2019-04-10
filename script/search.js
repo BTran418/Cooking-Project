@@ -25,7 +25,7 @@ function searchByText(search) {
     let searchResults = [];
     search = search.toLowerCase();
 
-    console.log('Yo searching by text...');
+    // console.log('Yo searching by text...');
     // console.log(jsonObjects[0].description);
     for (let i = 0; i < jsonObjects.length; i++) {
         if (jsonObjects[i]['description'].toLowerCase().includes(search) || jsonObjects[i]['title'].toLowerCase().includes(search)) {
@@ -60,7 +60,7 @@ function populateResults(recipe, id) {
     let media = document.createElement('div');
     let mediaSrc = null;
 
-    console.log(recipe.media);
+    // console.log(recipe.media);
 
     if (recipe.media[0].includes(".mp4")) {
         mediaSrc = document.createElement('video');
@@ -115,7 +115,7 @@ function searchBtnClicked() {
     }
 
     let searchType = document.querySelector('.search_type.active');
-    console.log(searchType.innerText);
+    // console.log(searchType.innerText);
     //Search by text
     if (searchType.innerText == 'Text') {
         //Dont do anything if the search box is empty.
@@ -141,9 +141,16 @@ function searchBtnClicked() {
         searchByTag(temp);
         // console.log(searchByTag(temp));
     }
-    for (let i = 0; i < results.length; i++) {
-        populateResults(results[i], ids[i]);
+    if(results.length == 0 || results == null){
+        document.querySelector('#result').innerHTML = '<div class=\'result_error\'>No results so far. =(</div>';
     }
+    else{
+        document.querySelector('#result').innerHTML ='';
+        for (let i = 0; i < results.length; i++) {
+            populateResults(results[i], ids[i]);
+        }
+    }
+    
     // searchByText(search);
 
 

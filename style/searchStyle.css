@@ -144,3 +144,9 @@ a{
 .media{
     border: 0.2rem solid black;
 }
+
+.result_error{
+    font-size: 3rem;
+    margin: 2rem;
+    color: #333;
+}
