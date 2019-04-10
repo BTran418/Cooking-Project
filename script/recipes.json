@@ -28,6 +28,9 @@
             "1 package (12 ounce) penne pasta",
             "Cooking spray"
         ],
+        "media":{
+            "0": "cook1.jpg"
+        },
         "substitutes": {
             "1": [
                 "Canola oil",
@@ -72,6 +75,9 @@
             "Bring a large pot of salted water to boil. Add pasta and cook, stirring occasionally, until tender yet firm to the bite, about 12 minutes. Drain.",
             "Divide pasta between the white sauce and the lamb sauce and mix to combine. Pour the pasta with lamb sauce into the prepared baking dish; spread the pasta with white sauce on top.",
             "Bake in the preheated oven until top is golden and pastitsio is bubbling, about 30 minutes. Let cool for 5 minutes before serving."
+        ],
+        "tags":[
+            "veggies"
         ]
     },
     {

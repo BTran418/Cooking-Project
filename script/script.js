@@ -61,6 +61,12 @@ function populateRecipeSite(id) {
         let textDiv = document.createElement("div");
         textDiv.classList.add("item_text");
         textDiv.innerText = recipeObj.ingredients[i];
+        //Check for substitutes
+        console.log(recipeObj.substitutes["" + i]);
+        if(recipeObj.substitutes["" + i] != null){
+            // itemDiv.classList.add('has_substitutes');
+            textDiv.classList.add("add_arrow");
+        }
         //Add text div to item div.
         itemDiv.append(textDiv);
         //Add to ingredients div.
@@ -309,6 +315,8 @@ function substituteClicked(element) {
     let newText = element.innerText;
     element.innerText = targetIngredientDiv.innerText;
     targetIngredientDiv.innerText = newText;
+
+    targetIngredientDiv.parentElement.classList.add("has_substitutes");
 }
 /**
  * Closes the substitution menu. Should be called whenever the user clicks anything but a new ingredient item.
