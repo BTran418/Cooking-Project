@@ -14,8 +14,11 @@
     background-color: white;
     color: #333;
     font-size: 1rem;
-}
 
+}
+a{
+    text-decoration: none;
+}
 .container2{
     padding-top: 5px;
     text-align: center;

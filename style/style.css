@@ -149,3 +149,6 @@ display: block;
 .disabled{
     display:none;
 }
+.container, .navbar, .container2, .container3{
+    box-shadow: 0 0 1rem black;
+}
