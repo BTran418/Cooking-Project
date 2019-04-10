@@ -192,3 +192,15 @@ h1 {
 .individual_comment{
     margin: 1rem;
 }
+
+.has_substitutes{
+    color: snow;
+    background-color: rgb(126, 126, 255);
+}
+
+.add_arrow{
+    
+}
+.add_arrow::after{
+    content: " >";
+}
