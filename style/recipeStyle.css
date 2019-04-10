@@ -197,7 +197,7 @@ h1 {
 }
 
 .has_substitutes{
-    color: snow;
+    /* color: snow; */
     background-color: rgb(126, 126, 255);
 }
 
@@ -206,4 +206,32 @@ h1 {
 }
 .add_arrow::after{
     content: " >";
+}
+
+.expand_area{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    width: 100%;
+    margin-bottom:0.5rem;
+}
+
+.expand_btn{
+    display: flex;
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: #333; 
+    border: 0.1rem solid #333;
+    color: snow;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.expand_btn:hover{
+    background-color: snow;
+    color: #333;
+    border: 0.1rem solid #333;
 }

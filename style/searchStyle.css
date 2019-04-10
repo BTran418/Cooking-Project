@@ -81,6 +81,9 @@
 
 .search_types{
     display:flex;
+    color:snow;
+
+    border: solid 0.2rem snow;
 
 }
 .search_type{

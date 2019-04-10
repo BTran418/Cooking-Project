@@ -16,6 +16,7 @@ window.onload = function () {
         jsonObjects = request.response; //Create recipe objects from a JSON file.
         console.log(jsonObjects);
         populateTrending();
+        document.getElementById('random_recipe').setAttribute('href', 'recipe.html?recipe-id=' + getRandomInt(jsonObjects.length))
     }
 }
 

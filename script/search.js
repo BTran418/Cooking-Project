@@ -115,13 +115,15 @@ function searchBtnClicked() {
     }
 
     let searchType = document.querySelector('.search_type.active');
-    //Searcg by text
+    console.log(searchType.innerText);
+    //Search by text
     if (searchType.innerText == 'Text') {
         //Dont do anything if the search box is empty.
         let search = document.getElementById('search_criteria').value;
         if (search == '' || search == null) {
             return;
         }
+        // console.log("assad");
         searchByText(search);
         // console.log(searchByText(search));
         
@@ -161,7 +163,7 @@ function criteriaClicked(element) {
     }
 
     //Change elements
-    let textSearch = '<input type="text" name="search_box" id="search_criteria" placeholder="Search for">';
+    let textSearch = '<input type="text" name="search_box" id="search_criteria" placeholder="Search for" oninput="searchBtnClicked()">';
         // '<input class="btn" type="button" value="Search" onclick="searchBtnClicked()">';
     let tagSearch = '<div class=\'tag_search\'>' + 
         '<div class=\'tag_collection\'>' +
