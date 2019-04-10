@@ -10,6 +10,14 @@ width: 100%;
 background-attachment: fixed;
 }
 
+#CI_Title {
+    font-size: 1.5rem;
+}
+
+h1{
+    font-family: 'Merienda', cursive;
+}
+
 #black_alpha {
     background-color: black; 
     opacity: 0.6;
